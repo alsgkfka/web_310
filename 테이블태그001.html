@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>테이블태그</title>
+    </head>
+    <body>
+        <h1>테이블태그</h1>
+        <p>웹문서에서 표를 만드는 요소 - table태그
+            <br/>
+            자동줄바꿈을 이루는 블럭요소입니다.
+            <br/>
+            기본적으로 행과 열을 가지고 있다.
+            <br/>
+            엑셀처럼 행을 먼저 만들고 행 내부에 열을 넣어서 내용을 삽입한다<br/>
+            테이블은 선이 있지만 보이지 않아 속성값을 설정해서 선이 보이게 만들 수 있다. 
+            border="1"
+        </p>
+
+        <ul>
+            <li>행요소 - tr</li>
+            <li>열요소 - td (셀으로 내용이 들어감)</li>
+        </ul>
+
+        <!-- 테이블시작 -->
+        <table border="1">
+            <!-- 3열 3행 -->
+            <tr>
+                <td>1열1행</td>
+                <td>1열2행</td>
+                <td>1열3행</td>
+            </tr>
+            <tr>
+                <td>2열1행</td>
+                <td>2열2행</td>
+                <td>2열3행</td>
+            </tr>
+            <tr>
+                <td>3열1행</td>
+                <td>3열2행</td>
+                <td>3열3행</td>
+            </tr>
+
+            <!-- 셀병합 -->
+            <tr>
+                <td rowspan="2">상하병합</td>
+                <td colspan="2">좌우병합</td>
+                
+            </tr>
+            <tr>
+                
+                <td>5열2행</td>
+                <td>5열3행</td>
+            </tr>
+        </table>
+
+        <h2>예제1</h2>
+
+        <table border="1">
+            <tr>
+                <td colspan="3">공연요금</td>
+            </tr>
+
+            <tr>
+                <td>구분</td>
+                <td>R석</td>
+                <td>S석</td>
+            </tr>
+
+            <tr>
+                <td>성인</td>
+                <td>50,000원</td>
+                <td>30,000원</td>
+            </tr>
+
+            <tr>
+                <td>청소년</td>
+                <td>40,000원</td>
+                <td>20,000원</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">공연시간</td>
+                <td>1회차</td>
+                <td>13:00~15:00</td>
+            </tr>
+
+            <tr>
+                
+                <td>2회차</td>
+                <td>16:00~18:00</td>
+            </tr>
+        </table>
+
+        <h2>예제2</h2>
+        <table border="1">
+            <tr>
+                <td colspan="6" style="text-align:center">한국의차</td>
+            </tr>
+
+            <tr>
+                <td rowspan="6">뿌리차</td>
+                <td>인삼차</td>
+                <td rowspan="9">과일차</td>
+                <td>수정과</td>
+                <td rowspan="5">잎차</td>
+                <td>뽕잎차</td>
+            </tr>
+            <tr>
+                <td>당귀차</td>
+                <td>유자차</td>
+                <td>감잎</td>
+            </tr>
+            <tr>
+                <td>생각차</td>
+                <td>구기자차</td>
+                <td>솔잎차</td>
+            </tr>
+            <tr>
+                <td>칡차</td>
+                <td>대추차</td>
+                <td>국화차</td>
+            </tr>
+            <tr>
+                <td>둥글레차</td>
+                <td>오미자차</td>
+                <td>이슬차</td>
+            </tr>
+            <tr>
+                <td>마차</td>
+                <td>매실차</td>
+                <td rowspan="4">기타</td>
+                <td>두충차</td>
+            </tr>
+            <tr>
+                <td rowspan="3">곡물차</td>
+                <td>보리차</td>
+                <td>모과차</td>
+                <td>영지버섯차</td>
+            </tr>
+            <tr>
+                <td>옥수수차</td>
+                <td>산수유차</td>
+                <td>귤강차</td>
+            </tr>
+            <tr>
+                <td>현미차</td>
+                <td>탱자차</td>
+                <td>쌍화차</td>
+            </tr>
+        </table>
+
+
+
+    </body>
+</html>
