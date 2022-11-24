@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        legend {font-weight: bold;
+                color: purple;}
+
+        fieldset {margin: 10px;
+                padding: 10px;}
+
+
+        ol li label {width: 100px;
+                display: inline-block;
+                font-weight: bold;
+                float: left;}
+        
+        ol {list-style: none;}
+        li {margin-bottom: 10px;}
+
+        div {text-align: center;}
+
+        #adress {width: 500px;}
+
+    </style>
+</head>
+<body>
+    <h1>상품 주문서</h1>
+
+    <form action="" method="">
+        <fieldset>
+            <legend>개인정보</legend>
+            <ol>
+                <li>
+                    <label for="name">이름</label>
+                    <input type="text" id="name" autofocus placeholder="여백없이 입력">
+                </li>
+                <li>
+                    <label for="phone">연락처</label>
+                    <input type="text" id="phone" placeholder="연락가능한 번호">
+                </li>
+            </ol>
+        </fieldset>
+
+        <fieldset>
+            <legend>배송지정보</legend>
+            <ol>
+                <li>
+                    <label for="adress">주소</label>
+                    <input type="text" id="adress">
+                </li>
+                <li>
+                    <label for="mail">E-mail</label>
+                    <input type="text" id="mail">
+                </li>
+                <li>
+                    <label for="memo">메모</label>
+                    <textarea name="" id="" cols="30" rows="3"></textarea>
+                </li>
+            </ol>
+        </fieldset>
+
+        <fieldset>
+            <legend>주문 정보</legend>
+            <ol>
+                <li>
+                    <input type="checkbox">
+                    <span>과테말라 안티구아 (100g)</span>
+                    <input type="number" value="0" min="0" max="50">
+                    <span>개</span>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <span>인도네시아 만델링 (100g)</span>
+                    <input type="number" value="0" min="0" max="50" step="5">
+                    <span>개</span>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <span>탐라는도다(블렌딩) (100g)</span>
+                    <input type="number" value="0" min="0" max="50" step="10">
+                    <span>개</span>
+                </li>
+            </ol>
+        </fieldset>
+
+        <div class="btn">
+            <input type="submit" value="주문하기">
+            <input type="reset" value="다시작성">
+        </div>
+
+    </form>
+</body>
+</html>
