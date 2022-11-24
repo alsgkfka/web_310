@@ -49,6 +49,21 @@
                 class명 한 칸 띄어쓰기로 여러 class명 부여 가능
             </td>
         </tr>
+        <tr>
+            <td>중복선택자</td>
+            <td>,</td>
+            <td>여러개의 선택자를 나열해서 사용 가능</td>
+        </tr>
+        <tr>
+            <td>중복선택자</td>
+            <td>붙여쓰기(태그.class명)</td>
+            <td>지정된 태그 중 해당 class이름만 부름</td>
+        </tr>
+        <tr>
+            <td>후손선택자</td>
+            <td>선택자 선택자</td>
+            <td>부모자 내부에 있는 요소를 모두 부름</td>
+        </tr>
 
     </table>
 
@@ -57,6 +72,18 @@
     <div id="box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo expedita, possimus voluptatem error natus distinctio reiciendis laudantium. Quod at, voluptate odit veniam natus nam tempora saepe reprehenderit sed harum tempore!</div>
     <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi totam fugiat, aut est necessitatibus corporis, amet odio quasi itaque provident illo rem eum possimus quae ab perspiciatis libero sunt? Labore.</div>
     <div class="box red">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, aut, culpa ipsa explicabo debitis fuga porro praesentium labore ipsam veniam laudantium odio, quae at nihil officiis expedita doloribus nam! Animi.</div>
+    <p class="red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quisquam aliquid accusamus, nostrum consequatur neque et excepturi ratione perferendis vero, provident ipsam! Fugit officia facere in hic eveniet consectetur corporis!</p>
+    
+    <div class="list">
+        <ul>
+            <li><em>menu1</em></li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+        </ul>
+        <em>자손자에 대한 정의</em>
+    </div>
+
     <style>
         * {font-size: 18px;}
         h1 {font-size: 30px;}
@@ -69,6 +96,7 @@
             color: yellow;}
         .box {padding: 10px;}
         .red {color: red;}
+        p.red {text-decoration: underline;}
     </style>
 
 
