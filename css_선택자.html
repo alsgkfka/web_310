@@ -64,6 +64,11 @@
             <td>선택자 선택자</td>
             <td>부모자 내부에 있는 요소를 모두 부름</td>
         </tr>
+        <tr>
+            <td>자손선택자</td>
+            <td>부모자>자손자</td>
+            <td>다이렉트 자손자에 한해서 설정 가능</td>
+        </tr>
 
     </table>
 
@@ -76,7 +81,9 @@
     
     <div class="list">
         <ul>
-            <li><em>menu1</em></li>
+            <li>
+                <em>menu1</em>
+            </li>
             <li>menu2</li>
             <li>menu3</li>
             <li>menu4</li>
@@ -97,6 +104,14 @@
         .box {padding: 10px;}
         .red {color: red;}
         p.red {text-decoration: underline;}
+
+        .list em {font-size: 30px;}
+        .list li {color: blue;}
+        .list ul {background-color: aquamarine;}
+
+        /* 자손자선택법 */
+        .list>ul>li>em {font-style: normal;}
+        .list>em {color: green;}
     </style>
 
 
