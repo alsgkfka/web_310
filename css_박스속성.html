@@ -1,120 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>박스속성</title>
-</head>
-<body>
-    <h1>박스속성</h1>
-    <p>웹페이지 레이아웃 구성시 가장 중요</p>
-    <ul>
-        <li>margin - 여백</li>
-        <li>padding - 영역</li>
-        <li>width, height - 크기</li>
-    </ul>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>박스속성</title>
+    </head>
+    <body>
+        <h1>박스속성</h1>
+        <p>웹페이지 레이아웃 구성시 가장 중요</p>
+        <ul>
+            <li>margin - 여백</li>
+            <li>padding - 영역</li>
+            <li>width, height - 크기</li>
+        </ul>
 
-    <p>작성법</p>
-    <ul>
-        <li>전체적용 - 50px 하나의 숫자로 네군데 모두 적용</li>
-        <li>각자적용 - 위쪽 오른쪽 아래쪽 왼쪽 (시계방향) / 모두 단위와 함께 작성, 중간에 쉼표사용 불가<br>
-        위아래 좌우 / 두개의 숫자로 첫번째 숫자 - 위아래 같이 적용 , 두번째 숫자 - 좌우 같이 적용</li>
-        <li>부분적용
-            <ul>
-                <li>margin-left: 왼쪽여백</li>
-                <li>margin-right: 오른쪽여백</li>
-                <li>margin-top: 위쪽여백</li>
-                <li>margin-bottom: 아래쪽여백</li>
-                <li>padding-left: 왼쪽영역</li>
-                <li>padding-right: 오른쪽영역</li>
-                <li>padding-top: 위쪽영역</li>
-                <li>padding-bottom: 아래쪽영역</li>
-            </ul>
-        </li>
-    </ul>
+        <p>작성법</p>
+        <ul>
+            <li>전체적용 - 50px 하나의 숫자로 네군데 모두 적용</li>
+            <li>각자적용 - 위쪽 오른쪽 아래쪽 왼쪽 (시계방향) / 모두 단위와 함께 작성, 중간에 쉼표사용 불가<br>
+                위아래 좌우 / 두개의 숫자로 첫번째 숫자 - 위아래 같이 적용 , 두번째 숫자 - 좌우 같이 적용</li>
+            <li>부분적용
+                <ul>
+                    <li>margin-left: 왼쪽여백</li>
+                    <li>margin-right: 오른쪽여백</li>
+                    <li>margin-top: 위쪽여백</li>
+                    <li>margin-bottom: 아래쪽여백</li>
+                    <li>padding-left: 왼쪽영역</li>
+                    <li>padding-right: 오른쪽영역</li>
+                    <li>padding-top: 위쪽영역</li>
+                    <li>padding-bottom: 아래쪽영역</li>
+                </ul>
+            </li>
+        </ul>
 
-    <p>width : 가로크기값 <br>
-    width+(padding+border)*2</p>
-    <p>height : 세로크기값 <br>
-    height+(padding+border)*2</p>
-    
-    <p>border</p>
-    <em>박스의 테두리, 가로세로값에 영향을 줌<br>
-        색상, 굵기, 모양을 한 번에 모두 표기시 보임</em>
-    <p>작성법<br>
-    border: black 2px solid (순서와 관계 없음) <br>
-    4면 모두 한 번에 나오거나 지정할 수 있음 border-left,righttop,bottom</p>
+        <p>width : 가로크기값
+            <br>
+            width+(padding+border)*2</p>
+        <p>height : 세로크기값
+            <br>
+            height+(padding+border)*2</p>
 
-    <p>선의 종류 <br>
-    dashed (긴점선), dottes(잛은점선), double(두줄선), 액자선(groove, ridge, inset, outset), none(없음)</p>
+        <p>border</p>
+        <em>박스의 테두리, 가로세로값에 영향을 줌<br>
+            색상, 굵기, 모양을 한 번에 모두 표기시 보임</em>
+        <p>작성법<br>
+            border: black 2px solid (순서와 관계 없음)
+            <br>
+            4면 모두 한 번에 나오거나 지정할 수 있음 border-left,righttop,bottom</p>
 
+        <p>선의 종류
+            <br>
+            dashed (긴점선), dottes(잛은점선), double(두줄선), 액자선(groove, ridge, inset, outset),
+            none(없음)</p>
 
-    <h2>예제</h2>
-    
-    <div class="box1">
-    <span>100PX</span>
-    <span>100px</span>
-    <p class="pad">패딩 50px</p>
-    <p class="mar">마진 50px</p>
-    </div>
+        <h3>배경</h3>
+        <p>배경색, 배경이미지, 배경반복, 배경위치, 배경고정 등을 설정</p>
+        <ul>
+            <li>background-color: 색깔이름, RGB, RGBA 로 표기 / tranparent(투명색)</li>
+            <li>background-image: url("위치주소기재")</li>
+            <li>background-repeat: repeat(가로세로 모두 반복), repeat-x(가로반복), repeat-y(세로반복), no-repeat(반복없음)</li>
+            <li>background-position: 가로위치, 세로위치, 생략시 기본값(left-top) <br>
+                숫자로 지정시 왼쪽상단 기준에서 시작됨. 가로세로숫자 위치명기재가능</li>
+            <li>background-attachment: 배경이미지를 고정시킬지 스크롤할지 결정 <br>
+                scroll, fixed</li>
+            <li>background-size: 
+                <ul>
+                    <li>100% - 화면을 비율상관없이 꽉 채움</li>
+                    <li>contain - 배경이미지를 잘리는 부분 관계없이 이미지우선으로 보임</li>
+                    <li>cover - 배경이미지와 관계없이 화면을 꽉채움</li>
+                </ul>
+            </li>
+        </ul>
 
-    <div class="box2 margin" >
-        <div>box1</div>
-        <div>box2</div>
-        <div>box3</div>
-        <div>box4</div>
-        <div>box5</div>
-    </div>
+        <h2>예제</h2>
 
-    <div class="box2 padding" >
-        <div>box1</div>
-        <div>box2</div>
-        <div>box3</div>
-        <div>box4</div>
-        <div>box5</div>
-    </div>
+        <div class="box1">
+            <span>100PX</span>
+            <span>100px</span>
+            <p class="pad">패딩 50px</p>
+            <p class="mar">마진 50px</p>
+        </div>
 
-    <div class="box2 border">
-        <div>box1</div>
-        <div>box2</div>
-        <div>box3</div>
-        <div>box4</div>
-        <div>box5</div>
-    </div>
+        <div class="box2 margin">
+            <div>box1</div>
+            <div>box2</div>
+            <div>box3</div>
+            <div>box4</div>
+            <div>box5</div>
+        </div>
 
-    <style>
+        <div class="box2 padding">
+            <div>box1</div>
+            <div>box2</div>
+            <div>box3</div>
+            <div>box4</div>
+            <div>box5</div>
+        </div>
 
-        .box2 {display: flex; background-color: beige; margin-bottom: 20px;}
-        .box2>div {width: 200px; height: 200px; background-color: rgba(0, 0, 0, 0.5);}
-        .margin>div:nth-child(1) {margin: 20px;}
-        .margin>div:nth-child(2) {margin:30px 20px 10px 50px}
-        .margin>div:nth-child(3) {margin:50px 20px}
-        .margin>div:nth-child(4) {margin-top: 10px;}
-        .margin>div:nth-child(5) {margin-bottom: 30px;}
+        <div class="box2 border">
+            <div>box1</div>
+            <div>box2</div>
+            <div>box3</div>
+            <div>box4</div>
+            <div>box5</div>
+        </div>
 
-        .padding>div:nth-child(1) {padding: 20px;}
-        .padding>div:nth-child(2) {padding: 30px 10px 15px 50px;}
+        <article class="bg1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus praesentium fuga voluptas neque cupiditate natus! Expedita, blanditiis numquam aliquam enim reiciendis, reprehenderit officia explicabo eos asperiores, nam earum quo minima?</article>
+        <article class="bg2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae placeat hic, molestias voluptatum quae maiores temporibus necessitatibus reiciendis cumque cum officia illum autem odio odit aspernatur labore ducimus, nihil eligendi.</article>
+        <article class="bg3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, itaque sunt nostrum asperiores cumque laborum veritatis! Doloribus inventore iure ut hic sint. Libero distinctio, iusto porro illo amet nesciunt ducimus.</article>
+        <article class="bg4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, itaque sunt nostrum asperiores cumque laborum veritatis! Doloribus inventore iure ut hic sint. Libero distinctio, iusto porro illo amet nesciunt ducimus.</article>
 
+        <style>
 
+            article {width: 800px; height: 800px;
+                    padding: 20px 50px;
+                    border: 1px black solid;}
+            .bg1 {background-image: url(img/apple.jpg);
+                    background-repeat: no-repeat;
+                    background-position: center center;}
+            .bg2 {background-image: url(img/apple.jpg);
+                    background-size: contain;}
+            .bg3 {background-image: url(img/bg01.jpg);
+                    background-size: cover;
+                    background-attachment: fixed;}
+            .bg4 {background-image: url(img/bg02.png);
+                    background-repeat: repeat-x;
+                    background-size: contain;}
 
-        .border>div:nth-child(1) {border:1px red solid}
-        .border>div:nth-child(2) {border-top: 10px blue double;}
-        .border>div:nth-child(3) {border-bottom: 3px purple dashed;}
-        .border>div:nth-child(4) {border-left: 8px green dotted;}
-        .border>div:nth-child(5) {border-right: 5px yellow groove;}
+            .box2 {
+                display: flex;
+                background-color: beige;
+                margin-bottom: 20px;
+            }
+            .box2 > div {
+                width: 200px;
+                height: 200px;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            .margin > div:nth-child(1) {
+                margin: 20px;
+            }
+            .margin > div:nth-child(2) {
+                margin: 30px 20px 10px 50px;
+            }
+            .margin > div:nth-child(3) {
+                margin: 50px 20px;
+            }
+            .margin > div:nth-child(4) {
+                margin-top: 10px;
+            }
+            .margin > div:nth-child(5) {
+                margin-bottom: 30px;
+            }
 
+            .padding > div:nth-child(1) {
+                padding: 20px;
+            }
+            .padding > div:nth-child(2) {
+                padding: 30px 10px 15px 50px;
+            }
+            .padding > div:nth-child(3) {}
+            .padding > div:nth-child(4) {}
+            .padding > div:nth-child(5) {}
 
-        .box1 {}
-        .box1>span {padding: 50px; background-color: aquamarine;}
-        .box1>span:nth-child(1) {display: inline-block;}
-        .box1>span:nth-child(2) {}
-        /* 인라인시에는 위아래 영역을 제대로 인식못함
+            .border > div:nth-child(1) {
+                border: 1px red solid;
+            }
+            .border > div:nth-child(2) {
+                border-top: 10px blue double;
+            }
+            .border > div:nth-child(3) {
+                border-bottom: 3px purple dashed;
+            }
+            .border > div:nth-child(4) {
+                border-left: 8px green dotted;
+            }
+            .border > div:nth-child(5) {
+                border-right: 5px yellow groove;
+            }
+
+            .box1 {}
+            .box1 > span {
+                padding: 50px;
+                background-color: aquamarine;
+            }
+            .box1 > span:nth-child(1) {
+                display: inline-block;
+            }
+            .box1 > span:nth-child(2) {}
+            /* 인라인시에는 위아래 영역을 제대로 인식못함
         단, 앞의 줄을 미리 맞춰 놓은 경우 엑셀처럼 따라감 */
 
-        .box1>.pad {padding: 50px; background-color: bisque;}
-        .box1>.mar {margin: 50px; background-color: antiquewhite;}
-    </style>
+            .box1 > .pad {
+                padding: 50px;
+                background-color: bisque;
+            }
+            .box1 > .mar {
+                margin: 50px;
+                background-color: antiquewhite;
+            }
+        </style>
 
-</body>
+    </body>
 </html>
