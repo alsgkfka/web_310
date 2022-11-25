@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스속성</title>
+</head>
+<body>
+    <h1>박스속성</h1>
+    <p>웹페이지 레이아웃 구성시 가장 중요</p>
+    <ul>
+        <li>margin - 여백</li>
+        <li>padding - 영역</li>
+        <li>width, height - 크기</li>
+    </ul>
+
+    <p>작성법</p>
+    <ul>
+        <li>전체적용 - 50px 하나의 숫자로 네군데 모두 적용</li>
+        <li>각자적용 - 위쪽 오른쪽 아래쪽 왼쪽 (시계방향) / 모두 단위와 함께 작성, 중간에 쉼표사용 불가<br>
+        위아래 좌우 / 두개의 숫자로 첫번째 숫자 - 위아래 같이 적용 , 두번째 숫자 - 좌우 같이 적용</li>
+        <li>부분적용
+            <ul>
+                <li>margin-left: 왼쪽여백</li>
+                <li>margin-right: 오른쪽여백</li>
+                <li>margin-top: 위쪽여백</li>
+                <li>margin-bottom: 아래쪽여백</li>
+                <li>padding-left: 왼쪽영역</li>
+                <li>padding-right: 오른쪽영역</li>
+                <li>padding-top: 위쪽영역</li>
+                <li>padding-bottom: 아래쪽영역</li>
+            </ul>
+        </li>
+    </ul>
+
+    <p>width : 가로크기값 <br>
+    width+(padding+border)*2</p>
+    <p>height : 세로크기값 <br>
+    height+(padding+border)*2</p>
+    
+    <p>border</p>
+    <em>박스의 테두리, 가로세로값에 영향을 줌<br>
+        색상, 굵기, 모양을 한 번에 모두 표기시 보임</em>
+    <p>작성법<br>
+    border: black 2px solid (순서와 관계 없음) <br>
+    4면 모두 한 번에 나오거나 지정할 수 있음 border-left,righttop,bottom</p>
+
+    <p>선의 종류 <br>
+    dashed (긴점선), dottes(잛은점선), double(두줄선), 액자선(groove, ridge, inset, outset), none(없음)</p>
+
+
+    <h2>예제</h2>
+    
+    <div class="box1">
+    <span>100PX</span>
+    <span>100px</span>
+    <p class="pad">패딩 50px</p>
+    <p class="mar">마진 50px</p>
+    </div>
+
+    <div class="box2 margin" >
+        <div>box1</div>
+        <div>box2</div>
+        <div>box3</div>
+        <div>box4</div>
+        <div>box5</div>
+    </div>
+
+    <div class="box2 padding" >
+        <div>box1</div>
+        <div>box2</div>
+        <div>box3</div>
+        <div>box4</div>
+        <div>box5</div>
+    </div>
+
+    <div class="box2 border">
+        <div>box1</div>
+        <div>box2</div>
+        <div>box3</div>
+        <div>box4</div>
+        <div>box5</div>
+    </div>
+
+    <style>
+
+        .box2 {display: flex; background-color: beige; margin-bottom: 20px;}
+        .box2>div {width: 200px; height: 200px; background-color: rgba(0, 0, 0, 0.5);}
+        .margin>div:nth-child(1) {margin: 20px;}
+        .margin>div:nth-child(2) {margin:30px 20px 10px 50px}
+        .margin>div:nth-child(3) {margin:50px 20px}
+        .margin>div:nth-child(4) {margin-top: 10px;}
+        .margin>div:nth-child(5) {margin-bottom: 30px;}
+
+        .padding>div:nth-child(1) {padding: 20px;}
+        .padding>div:nth-child(2) {padding: 30px 10px 15px 50px;}
+
+
+
+        .border>div:nth-child(1) {border:1px red solid}
+        .border>div:nth-child(2) {border-top: 10px blue double;}
+        .border>div:nth-child(3) {border-bottom: 3px purple dashed;}
+        .border>div:nth-child(4) {border-left: 8px green dotted;}
+        .border>div:nth-child(5) {border-right: 5px yellow groove;}
+
+
+        .box1 {}
+        .box1>span {padding: 50px; background-color: aquamarine;}
+        .box1>span:nth-child(1) {display: inline-block;}
+        .box1>span:nth-child(2) {}
+        /* 인라인시에는 위아래 영역을 제대로 인식못함
+        단, 앞의 줄을 미리 맞춰 놓은 경우 엑셀처럼 따라감 */
+
+        .box1>.pad {padding: 50px; background-color: bisque;}
+        .box1>.mar {margin: 50px; background-color: antiquewhite;}
+    </style>
+
+</body>
+</html>
