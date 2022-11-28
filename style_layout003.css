@@ -1,0 +1,17 @@
+@charset 'utf-8';
+
+/* box1 가로정렬 */
+.box1-1 {float: left; width: 20%;}
+.box1-2 {float: left; width: 80%;}
+.box1::after {display: block; clear: both; content: "";}
+
+/* box3 가로정렬 */
+.box3-1 {float: left; width: 33.3333%; font-size: 30px;}
+.box3-2 {float: left; width: 33.3333%;}
+.box3-3 {float: left; width: 33.3333%;}
+.box3::after{display: block; clear: both; content: "";}
+
+/* box4 가로정렬 */
+.box4-1 {float: left; width: 20%;}
+.box4-2 {float: left; width: 80%;}
+.box4::after{display: block; clear: both; content: "";}
