@@ -1,0 +1,13 @@
+@charset 'utf-8';
+
+/* 박스 2-1, 2-2의 가로설정 */
+.box2>.box2-1{float: left; width: 50%;}
+.box2>.box2-2{float: left; width: 50%;}
+.box2::after {display: block; clear: both; content: "";}
+
+/* 박스 4-$의 가로설정 */
+.box4>.box4-1{float: left; width: 20%;}
+.box4>.box4-2{float: left; width: 60%;}
+.box4>.box4-3{float: left; width: 20%;}
+.box4::after {display: block; clear: both; content: "";}
+
