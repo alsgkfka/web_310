@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS단위설정</title>
+</head>
+<body>
+    <h1>CSS단위란?</h1>
+    <p>스타일속성을 적용하려면 스타일 값을 입력할 수 있는 크기, 색상 등의 단위종류를 분류할 수 있어야 함</p>
+
+    <h2>크기단위</h2>
+    <table border="1">
+        <tr align="center">
+            <td>px</td>
+            <td>%</td>
+            <td>em</td>
+            <td>pt</td>
+        </tr>
+        <tr>
+            <td>해상도에 따라 상대적으로 달라지는 기본단위</td>
+            <td>(디바이스기준)100%기준으로 계산한 %단위</td>
+            <td>%단위를 100/1로 표현한 숫자단위</td>
+            <td>한글 등 문서 작성시 기본 글자단위</td>
+        </tr>
+        <tr>
+            <td>8px</td>
+            <td>50%</td>
+            <td>0.5em</td>
+            <td>6pt</td>
+        </tr>
+        <tr>
+            <td>10px(h6)</td>
+            <td>62.5%</td>
+            <td>0.625em</td>
+            <td>8pt</td>
+        </tr>
+        <tr>
+            <td>12px</td>
+            <td>75%</td>
+            <td>0.75em</td>
+            <td>9pt</td>
+        </tr>
+        <tr>
+            <td>13px(h5)</td>
+            <td>81.3%</td>
+            <td>0.813em</td>
+            <td>10pt</td>
+        </tr>
+        <tr style="background-color: lightyellow;"">
+            <td>16px(h4)</td>
+            <td>100%</td>
+            <td>1em</td>
+            <td>12pt</td>
+        </tr>
+        <tr>
+            <td>18px(h3)</td>
+            <td>112.5%</td>
+            <td>1.125em</td>
+            <td>14pt</td>
+        </tr>
+        <tr>
+            <td>24px(h2)</td>
+            <td>150%</td>
+            <td>1.5em</td>
+            <td>18pt</td>
+        </tr>
+        <tr>
+            <td>32px(h1)</td>
+            <td>200%</td>
+            <td>2em</td>
+            <td>24pt</td>
+        </tr>
+    </table>
+
+    <em>*px에서 em으로 변환을 도와주는 사이트 -> <a href="http://pxtoem.com">pxtoem.com</a></em>
+    <br>
+    <strong>단위에서 혼동되는 경우</strong>
+    <h4>em은 부모자의 영향을 받아 크기가 변동됨<br>
+        부모자의 영향을 받지 않고 em단위를 사용하고 싶은 경우 root의 em 이라는 단위인 'rem'을 사용</h4>
+    <h3>vw, vh</h3>
+    <p>'vw' 는 뷰포트 너비값의 100/1단위 <br>
+        'vh' 는 뷰포트 높이의 100/1 단위</p>
+        <strong>반응형에서 가장 유용하게 사용</strong>
+
+        <div class="box1">
+            <h3>뷰포트 예제</h3>
+            <p class="v01">단위의 고찰</p>
+            <p class="v02">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus neque odit corrupti. Mollitia, nobis. Corporis numquam repudiandae aliquid magni eveniet, explicabo ipsam eligendi rerum consequuntur culpa natus a excepturi iusto!</p>
+
+        </div>
+    
+    
+        <div class="box">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est asperiores libero at repudiandae voluptatibus maiores quaerat, ut rerum distinctio neque earum aliquam sapiente fuga. Sit nostrum saepe expedita quasi rem!</p>
+        <p><span>Lorem ipsum</span> dolor sit amet, consectetur adipisicing elit. Est asperiores libero at repudiandae voluptatibus maiores quaerat, ut rerum distinctio neque earum aliquam sapiente fuga. Sit nostrum saepe expedita quasi rem!</p>
+    </div>
+
+    <style>
+        .box1 .v01 {font-size: 5vw;}
+        .box1 .v02 {width: 50%;}
+
+
+        .box p:nth-child(1) {font-size: 20px;}
+        .box p:nth-child(2) {font-size: 16px;}
+        .box p:nth-child(2) span {background-color: blueviolet; font-size: 2em;}
+
+    </style>
+
+
+</body>
+</html>
