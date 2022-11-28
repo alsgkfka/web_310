@@ -51,7 +51,7 @@
 
         <p>선의 종류
             <br>
-            dashed (긴점선), dottes(잛은점선), double(두줄선), 액자선(groove, ridge, inset, outset),
+            dashed (긴점선), dottes(짧은점선), double(두줄선), 액자선(groove, ridge, inset, outset),
             none(없음)</p>
 
         <h3>배경</h3>
@@ -72,6 +72,14 @@
                 </ul>
             </li>
         </ul>
+
+        <h3>둥근사각형</h3>
+        <p>border-radius 값을 적용하여 텍스트 필드나 div 등의 요소를 원, 반원, 4/1조각 등 다양한 
+            형태를 제작할 수 있다. 
+        </p>
+        <p>작성법<br/>
+        border-radius : 30px / border-radius : 10px 20px 30px 40px</p>
+
 
         <h2>예제</h2>
 
@@ -111,7 +119,26 @@
         <article class="bg3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, itaque sunt nostrum asperiores cumque laborum veritatis! Doloribus inventore iure ut hic sint. Libero distinctio, iusto porro illo amet nesciunt ducimus.</article>
         <article class="bg4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, itaque sunt nostrum asperiores cumque laborum veritatis! Doloribus inventore iure ut hic sint. Libero distinctio, iusto porro illo amet nesciunt ducimus.</article>
 
+
+        <div class="box_1128">
+            <p>둥근사각형1</p>
+            <p>둥근사각형2</p>
+            <p>둥근사각형3</p>
+            <p>둥근사각형4</p>
+            <p>둥근사각형5</p>
+            <p>둥근사각형6</p>
+        </div>
+
+
         <style>
+            .box_1128 p {width: 200px; height: 200px; background-color: aquamarine;}
+            .box_1128 p:nth-child(1) {border-radius: 30px;}
+            .box_1128 p:nth-child(2) {border-radius: 50%;}
+            .box_1128 p:nth-child(3) {border-radius: 10px 20px 30px 40px;}
+            .box_1128 p:nth-child(4) {border-top-left-radius: 50px;}
+            .box_1128 p:nth-child(5) {border-bottom-right-radius: 50px; border-top-right-radius: 30px;}
+            .box_1128 p:nth-child(6) {border-radius: 10px 70px 15px 70px/10px 30px 40px 20px;}
+            /* 30px -> 30px/30px 로 사용하는 것과 같다. 앞숫자 가로위치변화 / 뒤숫자 세로위치변화 */
 
             article {width: 800px; height: 800px;
                     padding: 20px 50px;
