@@ -1,34 +1,70 @@
 /* d언어설정 */
 @charset "utf-8";
 
-/* BOX 가로정렬
+/*개인연습 
+/*BOX flex 정렬
 .BOX {display: flex;}
 .boxA {width: 20%;}
 .boxB {width: 80%;}
 
-/* box4 가로정렬
+/* box4 
 .box4 {display: flex;}
 .box4>div {flex: 1;} */
 
-/* box5 가로정렬
+/* box5 
 .box5 {display: flex;}
 .box5-1 {width: 70%;}
-.box5-2 {width: 30%;} */
+.box5-2 {width: 30%;} 
+-------------------------------------------------------*/
 
 
-
-/* boxA,A-2 가로정렬 */
+/* clearbox 정렬방식 */
+/* boxA,A-2 가로정렬 
 .boxA {width: 20%; float: left;}
 .boxA-2 {width: 80%; float: left;}
 .wrap::after {content: ""; clear: both; display: block;}
 
-/* boxC 가로정렬 */
+/* boxC 가로정렬 
 .box3 {width: 33.3333%; float: left;}
 .box4 {width: 33.3333%; float: left;}
 .box5 {width: 33.3333%; float: left;}
 .boxC::after {content: ""; clear: both; display: block;}
 
-/* boxD 가로정렬 */
+/* boxD 가로정렬 
 .box6 {width: 80%; float: left;}
 .box7 {width: 20%; float: left;}
-.boxD::after {content: ""; clear: both; display: block;}
+.boxD::after {content: ""; clear: both; display: block;} 
+-------------------------------------------------------*/
+
+
+/* flex 정렬방식 */
+/* wrap flex 정렬 */
+/* .wrap {display: flex;}
+.boxA {width: 20%; display: flex; flex-direction: column;}
+.boxA>div {flex: 1;}
+.boxA-2 {width: 80%;} */
+/* boxC flex 정렬 */
+/* .boxC {display: flex;}
+.boxC>div {flex: 1;} */
+/* boxD flex */
+/* .boxD {display: flex;}
+.box6 {width: 80%;}
+.box7 {width: 20%;} */
+
+
+
+@media (min-width:960px){
+    .wrap {display: flex;}
+.boxA {width: 20%; display: flex; flex-direction: column;}
+.boxA>div {flex: 1;}
+.boxA-2 {width: 80%;}
+}
+@media (min-width:600px){
+    .boxC {display: flex;}
+.boxC>div {flex: 1;}
+}
+@media (min-width:320px){
+    .boxD {display: flex;}
+.box6 {width: 80%;}
+.box7 {width: 20%;}
+}
