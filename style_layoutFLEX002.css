@@ -55,16 +55,22 @@
 
 @media (min-width:960px){
     .wrap {display: flex;}
-.boxA {width: 20%; display: flex; flex-direction: column;}
+.boxA {width: 20%; display: flex; flex-direction: column; align-content: space-around;}
 .boxA>div {flex: 1;}
 .boxA-2 {width: 80%;}
 }
 @media (min-width:600px){
-    .boxC {display: flex;}
-.boxC>div {flex: 1;}
+    .boxC {display:flex; flex-flow: row wrap;
+        align-items: center; align-content: center;}
+
+
 }
 @media (min-width:320px){
     .boxD {display: flex;}
 .box6 {width: 80%;}
 .box7 {width: 20%;}
 }
+
+.box3 {width: 50%; order: 0;}
+.box4 {width: 50%; order: 1;}
+.box5 {width: 50%; order: 2;}
