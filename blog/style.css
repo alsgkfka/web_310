@@ -1,0 +1,36 @@
+/* language */
+@charset "utf-8";
+
+/* settings */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* box3,4 */
+
+/*----------------  media query area -----------------*/
+/* mobile area*/
+/* tablet area*/
+/* --------768px 이상 -------- */
+@media(min-width:768px){
+        .box3 {
+            width : 70%;
+            float : left;
+        }
+        .box4 {
+            width : 30%;
+            float : left;
+        }
+        .boxA::after {
+            content : "";
+            display : block;
+            clear : both;
+        }
+    }
+/* web area */
+/* -------- 1280px 이상 -------- */
+@media(min-width:1280px){
+    .box1, .boxA {width: 1190px;
+        margin: 0 auto;}
+}
