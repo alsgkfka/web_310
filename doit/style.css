@@ -1,0 +1,103 @@
+/* language setting */
+@charset "UTF-8";
+
+/* settings */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* felx-flow:row wrap */
+
+    width: 90%;
+    margin: 0 auto;
+    /* 화면중앙배치 */
+    /* margin: 0 5% 0 5%; */
+}
+
+/* header area */
+.header {
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: flex-end;
+}
+.header > h1 {
+    background-color: #ff6b57;
+    width: 12.5%;
+    height: 142px;
+    position: absolute;
+    left: 0; top: 0;
+}
+.header > nav {
+    background-color: #ff6b57;
+    width: 87.5%;
+    height: 80px;
+}
+
+/* slider area */
+.slider_section {
+    width: 50%;
+    background-color: #3c90be;
+    height: 440px;
+}
+
+/* gallery area */
+.gallery_section {
+    background-color: #f8de73;
+    width: 27%;
+    height: 440px;
+}
+
+/* rankup area */
+.rankup_section {
+    background-color: #00d2a5;
+    width: 23%;
+    height: 440px;
+}
+
+/* latestpost area */
+.latest_post_section {
+    background-color: #9cabe4;
+    width: 30%;
+    height: 270px;
+}
+
+/* popular area */
+.popular_post_section {
+    background-color: #d76817;
+    width: 30%;
+}
+
+/* banner area */
+.banner_section {
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+}
+.banner_section>div {
+    flex: 1;
+}
+.banner_box_01 {
+    background-color: #0175bb;
+}
+.banner_box_02 {
+    background-color: #1261c9;
+}
+
+/* social area */
+.social_section {
+    background-color: #fe6eda;
+    width: 17%;
+}
+
+/* footer area */
+.footer {
+    background-color: #474747;
+    width: 100%;
+    height: 94px;
+}
