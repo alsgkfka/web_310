@@ -1,19 +1,62 @@
 /* language */
 @charset "utf-8";
 
+/* fonts settings */
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
 /* settings */
 *{
     margin: 0;
     padding: 0;
 }
 
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* *basic css* */
+/* logo set */
+.logo {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+}
+.logo a {
+    color: #7cbac1;
+    text-decoration: none;
+}
+
+/* menu set */
+.gnb {}
+.gnb>ul {
+    display: flex;
+}
+.gnb>ul>li {
+    width: auto;
+}
+.gnb>ul>li>a {
+    display: block;
+    padding: 15px;
+    font-size: 14px;
+}
+.box2 {
+    background-color: #7cbac1;
+}
+
+
 /* box3,4 set */
 
 
 /*-------------------------- media query-------------------------- */
 /* mobile */
-/* tablet */
-/* ------------- 768px or more -------------*/
+
+/*  --------((tablet)) 768px or more----------*/
 @media(min-width:768px){
     .box3 {
         width: 70%;
@@ -29,9 +72,10 @@
                 clear: both;
     }
 }
-/* web */
-/* ------------- 1280px or more -------------*/
+
+/* -------------((web)) 1280px or more -------------*/
 @media(min-width:1280px){
-    .box1, .boxA {margin: 0 auto;
-                width: 1190px;}
+    .box1, .boxA, .gnb {
+        margin: 0 auto;
+        width: 1190px;}
 }
