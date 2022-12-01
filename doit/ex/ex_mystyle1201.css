@@ -1,8 +1,14 @@
 /* language settings */
 @charset "utf-8";
 
+/* web-fonts */
+@import url('https://fonts.googleapis.com/css2?family=Solway&display=swap');
+
 /* settings */
+
 * {
+    font-family: 'Solway', serif;
+    line-height: 1;
     margin: 0;
     padding: 0;
 }
