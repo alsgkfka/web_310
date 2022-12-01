@@ -1,0 +1,36 @@
+/* language setting */
+@charset "utf-8";
+
+/* web-fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+/* settings */
+body {font-family: 'Nanum Gothic', sans-serif;
+    line-height: 1;
+    background: linear-gradient(to top , #666666 , #ffffff);}
+    /* css-generater 활용가능
+        https://css3generator.com/ */
+
+ul {list-style: none;}
+a {color: #ffffff;
+    text-decoration: none;}
+img {vertical-align: top;}
+
+
+/* ------------------------------media-query------------------------------ */
+/* mobile 320px */
+#wrap {display: flex;
+    flex-direction: column;
+    flex-wrap: no wrap;
+    width: 80%;
+    margin: 0 auto;}
+
+/* tablet 768px */
+@media (min-width:768px){
+    #wrap {flex-direction: row;
+        flex-wrap: wrap;}
+}
+/* web 1280px */
+@media (min-width:1280px){
+    
+}
