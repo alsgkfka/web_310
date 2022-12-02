@@ -9,21 +9,22 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <script src="https://use.fontawesome.com/3ca5297d44.js"></script>
     <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="ex_mystyle1201.css">
 </head>
 <body>
     <div id="wrap">
-        <section class="info_section">
-            <ul class="info_list">
-                <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-lock" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-cloud" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-            </ul>
-        </section>
-
-        <header class="header">
-            <h1 class="logo"><a href="ex_myintro1201.html">alsgkfka</a></h1>
+        <header class="header">        
+            <section class="info_section">
+                <ul class="info_list">
+                    <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-lock" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-cloud" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
+                </ul>
+            </section>
+            <h1 class="logo"><a href="ex_myintro1201.html">alsgkfka <br/>
+                <i class="fa fa-github-alt" aria-hidden="true"></i></a></h1>
             <nav class="nav">
                 <ul class="nav_list">
                     <li><a href="#">HOME</a><span class="sub_menu_toggle_btn">하위메뉴토글버튼</span></li>
@@ -35,11 +36,48 @@
             <span class="menu_toggle_btn"></span>
         </header>
 
-        <section class="slider_section">SLIDER</section>
-        <section class="gallery_section">GALLERY</section>
-        <section class="schedule_section">SCHEDULE</section>
-        <section class="diary_section">DIARY</section>
-        <section class="sns_section">SNS</section>
+        <section class="slider_section">
+            <span class="prev_btn"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+            <span class="next_btn"><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+        </section>
+        <section class="gallery_section">
+            <ul class="gallery_list">
+                <li>
+                    <a href="#">
+                        <figure>
+                            <img src="https://picsum.photos/800/500" alt="">
+                            <figcaption>pic's title</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <figure>
+                            <img src="https://picsum.photos/800/500" alt="">
+                            <figcaption>pic's title</figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="schedule_section">
+            <h2 class="schedule_title">SCHEDULE</h2>
+            <img src="../img/197df1d1969cd22ba5cd581ce9d308c4.jpg" alt="">
+        </section>
+        <section class="profile_section">
+            <h2 class="profile_title">PROFILE</h2>
+        </section>
+        <section class="diary_section">
+            <h2 class="diary_title">DIARY</h2>
+        </section>
+        <section class="sns_section">
+            <h2 class="sns_title">SNS</h2>
+            <ul class="sns_list">
+                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-comment" aria-hidden="true"></i></a></li>
+            </ul>
+        </section>
 
         <footer class="footer">
             <p>Copyrights ⓒ 2022. alsgkfka. All Rights Reserved. </p>
