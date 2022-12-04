@@ -1,0 +1,182 @@
+/* language */
+@charset "utf-8";
+
+/* fonts settings */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+/* settings */
+* {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* ***basic css*** */
+/* logo set */
+.logo a {
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    color: purple;
+}
+/* menu set */
+.box2 {
+    background-color:lavenderblush;
+}
+.gnb {}
+.gnb ul {
+    display: flex;
+}
+.gnb ul li {
+    width: auto;
+}
+.gnb ul li a {
+    display: block;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* article set */
+.story {}
+.story h2 {
+    font-size: 34px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.story time {
+    font-style: italic;
+    color: #555;
+}
+.story img {
+    width: 100%;
+    height: auto;}
+.story h3 {
+    font-size: 24px;
+    margin-top: 30px;
+    border-left: solid 10px #555;
+    padding-left: 10px;
+    font-weight: normal;
+}
+.story p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* latest set */
+.latest {
+    margin-bottom: 30px;
+}
+.latest h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: dotted lavenderblush 5px;
+    font-size: 18px;
+}
+.latest ul {}
+.latest li {}
+.latest li a {
+    display: block;
+    padding: 5px;
+    font-size: 15px;
+    color: #555;
+}
+/* recommend set */
+.recommend {
+    margin-bottom: 30px;
+}
+.recommend h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: dotted lavenderblush 5px;
+    font-size: 18px;
+}
+.recommend ul {}
+.recommend li {}
+.recommend li a {
+    display: block;
+    padding: 5px;
+    font-size: 15px;
+    color: #555;
+}
+/* popular set */
+.popular {
+    margin-bottom: 30px;
+}
+.popular h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: dotted lavenderblush 5px;
+    font-size: 18px;
+}
+.popular ul {}
+.popular li {}
+.popular li a {
+    display: block;
+    padding: 5px;
+    font-size: 15px;
+    color: #555;
+}
+
+/* footer set */
+.box5 {
+    border-top: solid 1px #555;
+}
+.footer {
+    color: #555;
+    font-size: 14px;
+}
+
+/* spacing */
+.box1 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.box3 {
+    padding-right: 50px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.box4 {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+.box5 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* ------------------------media queary---------------------------- */
+/* mobile */
+/* ((tablet)) 768px or more */
+@media (min-width:768px){
+    .box3 {
+        width: 70%;
+        float: left;
+    }
+    .box4 {
+        width: 30%;
+        float: left;
+    }
+    .boxA::after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+}
+/* ((web)) 1280px or more */
+@media (min-width:1280px) {
+    .box1, .boxA, .footer, .gnb {
+        width: 1190px;
+        margin: 0 auto;
+    }
+}

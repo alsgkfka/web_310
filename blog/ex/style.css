@@ -20,7 +20,7 @@ a {
 }
 
 
-/* *basic css* */
+/* ***basic css*** */
 /* logo set */
 .logo {
     font-family: 'Paytone One', sans-serif;
@@ -49,8 +49,142 @@ a {
     background-color: #7cbac1;
 }
 
+/* article set */
+.story {}
+.story h2 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.story time {}
+.story p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.story h3 {
+    font-size: 24px;
+    margin-top: 40px;
+    border-left: solid 10px #7cbac1;
+    padding-left: 10px;
+    font-weight: normal;
+}
+.story img {
+    width: 100%;
+    height: auto;
+}
 
-/* box3,4 set */
+/* sidemenu set */
+.sidemenu {
+    margin-bottom: 30px;
+}
+.sidemenu h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: dotted 2px #ddd;
+    font-size: 18px;
+    color: #666;
+}
+.sidemenu ul {}
+.sidemenu li {}
+.sidemenu li a {
+    display: block;
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* recommend set */
+.recommend {
+    margin-bottom: 30px;
+}
+.recommend h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: dotted 2px #ddd;
+    font-size: 18px;
+    color: #666;
+}
+.recommend ul {}
+.recommend li {}
+.recommend li a {
+    display: block;
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* popular set */
+.popular {}
+.popular h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: dotted 2px #ddd;
+    font-size: 18px;
+    color: #666;
+}
+.popular ul {}
+.popular li {}
+.popular li a {
+    display: block;
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* footer set */
+.box5 {
+    border-top: solid 1px #333;
+}
+.copyrights {
+    color: #666;
+    font-size: 14px;
+}
+
+/* box spacing */
+/* --up-down-- */
+    /* margin 
+    .box1 {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    .box2 {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    .box3 {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    .box4 {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    .box5 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }*/
+
+    /* padding */
+    .box1 {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .box3 {
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+    .box4 {
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+    .box5 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    /* --left-right-- */
+    .box3 {
+        padding-right: 50px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box
+    }
 
 
 /*-------------------------- media query-------------------------- */
@@ -67,15 +201,19 @@ a {
         float: left;
     }
     .boxA::after {
-                content: "";
-                display: block;
-                clear: both;
+        content: "";
+        display: block;
+        clear: both;
     }
 }
 
 /* -------------((web)) 1280px or more -------------*/
-@media(min-width:1280px){
-    .box1, .boxA, .gnb {
+@media (min-width:1280px) {
+    .box1,
+    .boxA,
+    .copyright,
+    .gnb {
+        width: 1190px;
         margin: 0 auto;
-        width: 1190px;}
+    }
 }
