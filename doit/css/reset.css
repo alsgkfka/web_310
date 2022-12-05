@@ -5,12 +5,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
 /* settings */
-body {font-family: 'Nanum Gothic', sans-serif;
+body {
+    font-family: 'Nanum Gothic', sans-serif;
     line-height: 1;
-    background: linear-gradient(to top , #666666 , #ffffff);}
+    background: linear-gradient(to top , #666666 , #ffffff);
     /* --css-generater 활용가능
         https://css3generator.com/ */
-
+    overflow-x: hidden;
+}
 ul {list-style: none;}
 a {color: gray;
     text-decoration: none;}
@@ -30,7 +32,7 @@ img {vertical-align: top;}
     width: auto;
     top: 30px;
     right: 30px;
-    z-index: 30px;
+    z-index: 50px;
     background-color: #2ecc71;
 }
 .info_list {
@@ -84,7 +86,7 @@ img {vertical-align: top;}
 .gnb li a {
     display: block;
     font-size: 20px;
-    padding: 50px;
+    padding: 0 50px;
     color: #ffffff;
 }
 
@@ -341,70 +343,6 @@ span.next_btn {
 
 /* ((tablet)) 768px or more */
 @media (min-width:768px) and (max-width:1139px){
-    /* header area */
-    .header {
-        width: 100%;
-        flex-wrap: wrap;
-    }
-    .header h1 {
-        width: 15%;
-        position: absolute;
-        left: 0; top: 40px;
-        z-index: 10;
-    }
-    .header h1 a {
-        display: block;
-        padding: 30px 0;
-        color: #ffffff;
-    }
-    .header nav {
-        width: 100%;
-        background-color: #2ecc71;
-        display: flex;
-        align-items: center;
-        position: relative;
-    }
-    .gnb {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 80px; right: 0;
-        width: 100%;
-    }
-    .gnb li {
-        width: 40%;
-        background-color: #2c3e50;
-        display: flex;
-        justify-content: space-around;
-    }
-    .gnb li a {
-        display: block;
-        font-size: 20px;
-        padding: 0;
-        color: #ffffff;
-    }
-    /* toggle btn */
-    .sub_menu_toggle_btn {
-        display: block;
-        background-image: url(../img/sub_menu_toggle_btn.png);
-        background-repeat: no-repeat;
-        width: 20px;
-        height: 20px;
-        text-indent: -9999px;
-        padding: 20px 0;
-        background-size: contain;
-    }
-    .menu_toggle_btn {
-        display: block;
-        position: absolute;
-        z-index: 50;
-        right: 50px; top: 50px;
-        background-image: url(../img/menu_toggle_btn.png);
-        width: 30px;
-        height: 30px;
-        background-repeat: no-repeat;
-        text-indent: -9999px;
-    }
     /* info_section area */
     .info_section {
         order: 0;
@@ -412,7 +350,7 @@ span.next_btn {
         width: 100%;
         top: 0;
         right: 0;
-        z-index: 30px;
+        z-index: 50px;
         background-color: #2ecc71;
     }
     .info_list {
@@ -430,6 +368,81 @@ span.next_btn {
         text-align: center;
     }
 
+    /* header area */
+    .header { 
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .header>h1 {
+        width:15%;
+        position: absolute;
+        left: 0;
+        top:40px;
+        font-size: 21px;
+        line-height: 1.3;
+        text-align: center;
+        background-color:#2ecc71 ;
+        z-index: 10;
+    }
+    .header>h1>a {
+        display: block;
+        padding: 30px 0;
+        color: #fff;
+    }
+    .header>nav {
+        width:100%;
+        background-color: #2ecc71;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .gnb {
+        display: none; /* 토글버튼 클릭시 변화할 부분 */
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: absolute;
+        top:80px;
+        right:-60%;
+        width: 100%;
+    }
+    .gnb>li {
+        width: 40%;
+        background-color: #2c3e50;
+        display: flex;
+        position: relative; 
+    }
+    .gnb>li>a {
+        display: block;
+        font-size: 20px;
+        padding: 20px 10px;
+        color: #fff;
+    }
+    /* toggle btn */
+        .sub_menu_toggle_btn {
+        display: block;
+        background-image: url(../img/sub_menu_toggle_btn.png); 
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        text-indent: -9999px;
+        padding: 20px 0;
+        background-size: contain;
+        position: absolute; 
+        top: 20px;
+        right: 20px;
+    }
+    .menu_toggle_btn {
+        display: block;
+        position: absolute;
+        z-index: 60;
+        top:70px;
+        right: 50px;
+        background-image: url(../img/menu_toggle_btn.png);
+        width:30px ;
+        height: 30px;
+        background-repeat: no-repeat;
+        text-indent: -9999px;
+}
 
 
     /* ******order setting****** */

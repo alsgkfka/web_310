@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, initial-scale=1, minimum-scale=1, user-scalable=no">
     <title>HTML학습서_Doit!</title>
     <!-- fontawesome link -->
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
@@ -11,6 +11,18 @@
     <!-- 외부스타일시트연결 -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/reset.css">
+    <!-- javascript -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- javascript 동적구현 -->
+    <script>
+        //menu btn click, show gnb
+        $(document).ready(function(){
+            $('.menu_toggle_btn').click(function(){
+                $('.gnb').slideToggle()
+            })
+        })
+    </script>
+
 </head>
 <body>
     <div id="wrap">

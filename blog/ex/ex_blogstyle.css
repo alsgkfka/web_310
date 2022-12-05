@@ -24,11 +24,11 @@ a {
 .logo a {
     font-family: 'Pacifico', cursive;
     font-size: 30px;
-    color: purple;
+    color:rgb(14, 43, 30);
 }
 /* menu set */
 .box2 {
-    background-color:lavenderblush;
+    background-color:rgb(33, 45, 36);
 }
 .gnb {}
 .gnb ul {
@@ -42,6 +42,7 @@ a {
     padding: 15px;
     font-size: 18px;
     font-weight: bold;
+    color: floralwhite;
 }
 /* article set */
 .story {}
@@ -55,7 +56,7 @@ a {
     color: #555;
 }
 .story img {
-    width: 100%;
+    width: 80%;
     height: auto;}
 .story h3 {
     font-size: 24px;
@@ -76,7 +77,7 @@ a {
 .latest h3 {
     margin-top: 0;
     margin-bottom: 10px;
-    border-bottom: dotted lavenderblush 5px;
+    border-bottom: dotted lightcoral 2px;
     font-size: 18px;
 }
 .latest ul {}
@@ -94,7 +95,7 @@ a {
 .recommend h3 {
     margin-top: 0;
     margin-bottom: 10px;
-    border-bottom: dotted lavenderblush 5px;
+    border-bottom: dotted lightcoral 2px;
     font-size: 18px;
 }
 .recommend ul {}
@@ -112,7 +113,7 @@ a {
 .popular h3 {
     margin-top: 0;
     margin-bottom: 10px;
-    border-bottom: dotted lavenderblush 5px;
+    border-bottom: dotted lightcoral 2px;
     font-size: 18px;
 }
 .popular ul {}
