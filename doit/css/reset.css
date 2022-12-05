@@ -113,6 +113,7 @@ span.next_btn {
     background-position: top right;
     margin: -10px;
 }
+
 /* gallery area */
 .gallery_section {
     display: flex;
@@ -143,6 +144,7 @@ span.next_btn {
 .gallery_list figcaption {
     margin-top: 10px;
 }
+
 /* rankup area */
 .rankup_section {
     display: flex;
@@ -162,10 +164,131 @@ span.next_btn {
     display: block;
     padding: 10px;
     font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* latest_post area */
+.latest_post_section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.latest_post_section .title {
+    margin-bottom: 30px;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+.latest_post_section .latest_post_list {}
+.latest_post_list li {}
+.latest_post_list li a {
+    display: block;
+    padding: 10px;
+    font-size: 14px;
     color: #ffffff;
     font-weight: bold;
 }
 
+/* popular_post area */
+.popular_post_section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 270px;
+}
+.popular_post_section .title {
+    margin-bottom: 30px;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+.popular_post_section .latest_post_list {}
+.popular_post_list li {}
+.popular_post_list li a {
+    display: block;
+    padding: 10px;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* banner area */
+.banner_section {}
+.banner_box_01 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 135px;}
+.banner_box_01 a {
+    display: block;
+    width: 100px;}
+.banner_box_01 svg {
+    width: 100%;
+    height: auto;
+    fill: #fff;
+}
+.banner_box_02 { 
+    height: 135px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner_box_02 .banner_list {
+    display: flex;
+}
+.banner_list li {}  
+.banner_list li a {
+    display: block;
+    width: 42px;
+    padding: 0 10px
+}
+.banner_list li a svg {fill: #fff;}
+
+/* social area */
+.social_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social_list {}
+.social_list li {
+    margin: 10px 0;
+}
+.social_list li a {
+    display: flex;
+    width: 55px;
+    height: 55px;
+    /* text-align: center; ---->display : flex; unavailable*/
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 50%;
+}
+.social_list li:nth-child(1) a {
+    background-color: #1da1f2; 
+}
+.social_list li:nth-child(2) a {
+    background-color: #1877f2;
+}
+.social_list li:nth-child(3) a {
+    background-color: #ff0000;
+}
+.social_list li a i {
+    color: #ffffff;
+}
+
+/* footer area */
+.footer {}
+.footer p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    padding: 30px 20px;
+    letter-spacing: 2px;
+}
 
 
 /* ******order setting****** */
@@ -203,7 +326,9 @@ span.next_btn {
 .footer {
     order: 9;
 }
-/* ------------------------------media-query------------------------------ */
+
+
+/* ----------------media-query---------------- */
 /* ((mobile)) 767px or less */
 @media (max-width:767px){
     #wrap {display: flex;
@@ -214,12 +339,139 @@ span.next_btn {
 }
 
 
-/* ((tablet)) 768px */
-@media (min-width:768px){
-    #wrap {flex-direction: row;
-        flex-wrap: wrap;}
+/* ((tablet)) 768px or more */
+@media (min-width:768px) and (max-width:1139px){
+    /* header area */
+    .header {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .header h1 {
+        width: 15%;
+        position: absolute;
+        left: 0; top: 40px;
+        z-index: 10;
+    }
+    .header h1 a {
+        display: block;
+        padding: 30px 0;
+        color: #ffffff;
+    }
+    .header nav {
+        width: 100%;
+        background-color: #2ecc71;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .gnb {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px; right: 0;
+        width: 100%;
+    }
+    .gnb li {
+        width: 40%;
+        background-color: #2c3e50;
+        display: flex;
+        justify-content: space-around;
+    }
+    .gnb li a {
+        display: block;
+        font-size: 20px;
+        padding: 0;
+        color: #ffffff;
+    }
+    /* toggle btn */
+    .sub_menu_toggle_btn {
+        display: block;
+        background-image: url(../img/sub_menu_toggle_btn.png);
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        text-indent: -9999px;
+        padding: 20px 0;
+        background-size: contain;
+    }
+    .menu_toggle_btn {
+        display: block;
+        position: absolute;
+        z-index: 50;
+        right: 50px; top: 50px;
+        background-image: url(../img/menu_toggle_btn.png);
+        width: 30px;
+        height: 30px;
+        background-repeat: no-repeat;
+        text-indent: -9999px;
+    }
+    /* info_section area */
+    .info_section {
+        order: 0;
+        position: relative;
+        width: 100%;
+        top: 0;
+        right: 0;
+        z-index: 30px;
+        background-color: #2ecc71;
+    }
+    .info_list {
+        display: flex;
+        width: 100%;
+    }
+    .info_list li {
+        width: 25%;
+    }
+    .info_list li a {
+        display: block;
+        padding: 10px;
+        color: #ffffff;
+        font-size: 20px;
+        text-align: center;
+    }
+
+
+
+    /* ******order setting****** */
+    .header {
+        order: 1;
+    }
+    .slider_section {
+        order: 2;
+    }
+    /* gallery area */
+    .gallery_section {
+        order: 7;
+    }
+    /* rankup area */
+    .rankup_section {
+        order: 3;
+    }
+    /* latestpost area */
+    .latest_post_section {
+        order: 4;
+    }
+    /* popularpost area */
+    .popular_post_section {
+        order: 5;
+    }
+    /* banner area */
+    .banner_section {
+        order: 8;
+    }
+    /* sns area */
+    .social_section {
+        order: 6;
+    }
+    /* footer area */
+    .footer {
+        order: 9;
+    }
+
 }
-/* ((web)) 1280px */
-@media (min-width:1280px){
+
+
+/* ((web)) 1140px or more */
+@media (min-width:1140px){
     
 }
