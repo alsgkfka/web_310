@@ -9,11 +9,15 @@
         <link rel="stylesheet" href="ex_blogstyle.css">
         <!-- fontawesome link -->
         <script src="https://use.fontawesome.com/29f84cf8f7.js"></script>
+        <!-- 그리드가이드연결 <link rel="stylesheet" href="grid-guide.css"> -->
     </head>
     <body>
         <div class="box1">
-            <h1 class="logo"><a href="ex_blog.html">The NewYorker</a></h1>
+            <h1 class="logo">
+                <a href="ex_blog.html">The NewYorker</a>
+            </h1>
         </div>
+
         <div class="box2">
             <nav class="gnb">
                 <ul>
@@ -32,13 +36,14 @@
                 </ul>
             </nav>
         </div>
+
         <div class="boxA">
             <div class="box3">
                 <article class="story">
                     <h2>
                         Id ratione, eos architecto et explicabo</h2>
                     <time datetime="">2022-12-01</time>
-                    <img src="../img/cccake.jpg" alt="">
+                    <p><img src="img/cccake.jpg" alt=""></p>
                     <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
                     <p>deleniti placeat rerum deserunt quo facere quisquam dolore non quasi adipisci
                         vitae. Sequi nobis aliquid nulla?</p>
@@ -50,66 +55,136 @@
                         sint quas in est quibusdam repellendus ducimus ipsum laboriosam expedita facere.
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi error officia
                         praesentium, recusandae odit omnis quasi iste doloribus ut ducimus.</p>
-                        <div class="sns">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-comment" aria-hidden="true"></i> 카카오로 공유</a></li>
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i> 페이스북으로 공유</a></li>
-                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> 인스타로 공유</a></li>
-                            </ul>
-                        </div>
+                    <div class="sns">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                    <span>카카오</span>로 공유</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    <span>페이스북</span>으로 공유</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    <span>인스타</span>로 공유</a>
+                            </li>
+                        </ul>
+                    </div>
                 </article>
+
+
+            <aside class="relation">
+                <h3>Related Article</h3>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="img/11.png" alt="">
+                            <div class="text">Lorem ipsum dolor si</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/222.png" alt="">
+                            <div class="text">Sequi error officia praesentium - ducimus expedita facere.</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/333.png" alt="">
+                            <div class="text">Sequi nobis aliquid nulla?</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/444.png" alt="">
+                            <div class="text">adipisicing elit.</div>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
             </div>
-
             <div class="box4">
-                <aside class="latest">
-                    <h3>Recent</h3>
-                    <ul>
-                        <li>
-                            <a href=""><i class="fa fa-caret-right" aria-hidden="true"></i>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit.</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> Id ratione, eos architecto et explicabo</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> recusandae odit omnis quasi iste doloribus ut ducimus.</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> Sequi nobis aliquid nulla?</a>
-                        </li>
-                    </ul>
-                </aside>
+                <div class="box4-1">
+                    <aside class="latest">
+                        <h3>Recent</h3>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.</a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                    Id ratione, eos architecto et explicabo</a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                    recusandae odit omnis quasi iste doloribus ut ducimus.</a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                    Sequi nobis aliquid nulla?</a>
+                            </li>
+                        </ul>
+                    </aside>
 
-                <aside class="popular">
-                    <h3>HOT</h3>
-                    <ul>
-                        <li>
-                            <a href="">
-                                <img src="../img/Screenshot_1.png" alt="">
-                                <div class="text">Lorem ipsum dolor sit amet adipisicing elit.</div></a>
-                        </li>
-                        <li>
-                            <a href="">
-                            <img src="../img/Screenshot_2.png" alt="">
-                            <div class="text">Sequi nobis aliquid nulla?</div></a>
-                        </li>
-                    </ul>
-                </aside>
+                    <aside class="popular">
+                        <h3>HOT</h3>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="img/Screenshot_1.png" alt="">
+                                    <div class="text">Lorem ipsum dolor sit amet adipisicing elit.</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="img/Screenshot_2.png" alt="">
+                                    <div class="text">Sequi nobis aliquid nulla?</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
 
-                <aside class="recommend">
-                    <h3>Recommend</h3>
-                    <ul>
-                        <li>
-                            <a href="">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</a>
-                        </li>
-                        <li>
-                            <a href="">Id ratione, eos architecto et explicabo</a>
-                        </li>
-                        <li>
-                            <a href="">Sequi nobis aliquid nulla?</a>
-                        </li>
-                    </ul>
-                </aside>
+                <div class="box4-2">
+                    <aside class="recommend">
+                        <h3>Recommend</h3>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="img/c1.png" alt="">
+                                    <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        <span>daily</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="img/c2.png" alt="">
+                                    <div class="text">Id ratione, eos architecto et explicabo
+                                        <span>travel</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="img/c3.png" alt="">
+                                    <div class="test">Sequi nobis aliquid nulla?
+                                        <span>board</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
             </div>
         </div>
 

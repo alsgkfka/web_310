@@ -54,6 +54,7 @@ a {
 .story time {
     font-style: italic;
     color: #555;
+    font-size: 14px;
 }
 .story img {
     width: 80%;
@@ -79,6 +80,7 @@ a {
 }
 .sns ul li {
     flex: 1;
+    font-weight: bold;
 }
 .sns ul li:nth-child(1) a {
     background-color: #f9e100;
@@ -101,6 +103,37 @@ a {
     color: #fff;
 }
 .sns ul li i {}
+/* relation set */
+.relation {
+    margin-top: 40px;
+    background-color: blanchedalmond;
+    padding: 20px;
+}
+.relation h3 {
+    margin-top: 0;
+    color: brown;
+    margin-bottom: 5px;
+}
+.relation ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.relation li {
+    float: left;
+    width: 25%;
+}
+.relation li a {
+    display: block;
+    padding: 5px;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+.relation li img {
+    width: 100%;
+}
+.relation li div {}
 
 /* latest set */
 .latest {
@@ -139,8 +172,29 @@ a {
     font-size: 15px;
     color: #555;
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    border-bottom: #ddd dotted 1px;
 }
+.recommend li a::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+.recommend img {
+    float: left;
+    width: 60px;
+}
+.recommend .text {
+    float: none;
+    width: auto;
+    padding-left: 10px;
+}
+.recommend span {
+    display: block;
+    color: brown;
+    font-size: 13px;
+}
+
 /* popular set */
 .popular {
     margin-bottom: 30px;
@@ -155,10 +209,10 @@ a {
 .popular li {}
 .popular li a {
     display: block;
-    padding: 5px;
     font-size: 15px;
     position: relative;
     color: #555;
+    margin-bottom: 10px;
 }
 .popular li a img {
     width: 100%;
@@ -207,9 +261,57 @@ a {
     padding-top: 15px;
     padding-bottom: 15px;
 }
+/* --left-right-- */
+.box3 {
+    padding-right: 50px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box
+}
+.box1, .boxA, .box5 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 /* ------------------------media queary---------------------------- */
-/* mobile */
+/* 1.(((normal-mobile)))---599px or less */
+@media (max-width:599px){
+    /* sns */
+    .sns span {
+        display: inline-block;
+        text-indent: -9999px;
+    }
+    /* relation article */
+    .relation ul li {
+        float: left;
+        width: 50%;
+    }
+    .relation li a {
+        display: block;
+        padding: 5px;
+        font-size: 13px;
+        text-align: center;
+    }
+    .relation li:nth-child(odd) {
+        clear: both;
+    }
+}
+/* 2.(((max-mobile)))---600px~767px or less */
+@media (min-width:600) and (max-width:767px){
+    .box4-1 {
+        float: left;
+        width: 49%;
+    }
+    .box4-2 {
+        float: right;
+        width: 49%;
+    }
+    .box4::after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+}
 /* ((tablet)) 768px or more */
 @media (min-width:768px){
     .box3 {
