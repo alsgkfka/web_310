@@ -47,11 +47,17 @@
     width: 25%;
     height: 440px;
 }
+/* diary area */
+.diary_section {
+    background-color: white;
+    width: 15%;
+    height: 440px;
+}
 /* profile area */
 .profile_section {
     background-color: lightslategray;
-    width: 15%;
-    height: 440px;
+    width: 30%;
+    height: 270px;
 }
 /* schedule area */
 .schedule_section {
@@ -59,12 +65,7 @@
     width: 35%;
     height: 270px;
 }
-/* diary area */
-.diary_section {
-    background-color: white;
-    width: 30%;
-    height: 270px;
-}
+
 /* banner area */
 .banner_section {
     display: flex;
