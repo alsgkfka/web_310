@@ -58,9 +58,11 @@ img {
 /* toggle btn */
 .sub_menu_toggle_btn {
     display: none;
+    cursor: pointer;
 }
 .menu_toggle_btn {
     display: none;
+    cursor: pointer;
 }
 
 /* header area */
@@ -100,7 +102,7 @@ img {
     color: #2c3e50;
 }
 .nav_list li a:hover {
-    color: #fff;
+    font-weight: bold;
 }
 
 /* slider area */
@@ -174,7 +176,7 @@ span.next_btn {
     align-items: center;
 }
 .diary_section .diary_title {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     font-size: 20px;
     text-align: center;
     color: #000;
@@ -185,6 +187,14 @@ span.next_btn {
     font-size: 14px;
     font-weight: bold;
     color: #000;
+    background-image: url(../img/feather-solid.svg);
+    background-repeat: no-repeat;
+    background-size: 8%;
+    background-position: left center;
+    text-indent: 15px;
+}
+.diary_list li a:hover {
+    text-decoration: underline;
 }
 
 /* schedule_section area */
@@ -195,22 +205,31 @@ span.next_btn {
     align-items: center;
 }
 .schedule_title {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 20px;
     text-align: center;
-    color: #2c3e50;
+    color: saddlebrown;
+}
+
+.schedule_section img {
+    width: 70%;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 
-/* profile_section area */
-.profile_section {
+/* board_section area */
+.board_section {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     height: 270px;
 }
-.profile_section .profile_title {
+.board_section .board_title {
     margin-bottom: 30px;
     font-size: 20px;
     text-align: center;
@@ -231,6 +250,10 @@ span.next_btn {
     width: 100%;
     height: auto;
     fill: #fff;
+    transition: all 0.3s;
+}
+.banner_box_01 a:hover svg {
+    transform: scale(1.2);
 }
 .banner_box_02 { 
     height: 135px;
@@ -250,6 +273,15 @@ span.next_btn {
 .banner_list li a svg {
     fill: #000;}
 
+.banner_box_02 li:nth-child(1) a:hover svg {
+    fill: navy;
+}
+.banner_box_02 li:nth-child(2) a:hover svg {
+    fill: rgb(238, 219, 14);
+}
+.banner_box_02 li:nth-child(3) a:hover svg {
+    fill: #73087f;
+}
 /* sns_section area */
 .sns_section {
     display: flex;
@@ -281,8 +313,8 @@ span.next_btn {
 .sns_list li:nth-child(3) a {
     background-color: #f9e000;}
 .sns_list li a i {
-    color: #000;
-    font-size: 18px;
+    color: #fff;
+    font-size: 20px;
 }
 
 /* footer area */
@@ -309,7 +341,7 @@ span.next_btn {
 .diary_section {
     order: 4;
 }
-.profile_section {
+.board_section {
     order: 5;
 }
 .schedule_section {
@@ -400,17 +432,21 @@ span.next_btn {
     }
     .nav_list>li {
         width: 40%;
-        background-color: lemonchiffon;
+        background-color: #2c3e50;
         display: flex;
         position: relative; 
+        z-index: 10;
     }
     .nav_list>li>a {
         display: block;
         font-size: 20px;
         padding: 20px 10px;
-        color: #2c3e50;
+        color: #fff;
         z-index: 50;
     }
+    .nav_list li a:hover{
+        color: #000;
+    }    
     /* toggle btn */
         .sub_menu_toggle_btn {
         display: block;
@@ -466,20 +502,28 @@ span.next_btn {
     }
 
     .diary_section {
-        background-color: #999;
+        background-color: lightgray;
         width: 100%;
         height: 270px;
     }
 
-    .profile_section {
+    .board_section {
         background-color: lightsteelblue;
         width: 100%;
         height: 200px;
     }
 
     .schedule_section {
-        background-color: lavender;
+        background-color: lightblue;
         width: 100%;
+    }
+    .schedule_section img {
+        width: 50%;
+        height: auto;
+        padding: 10px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
     }
 
     .banner_section {
@@ -565,31 +609,24 @@ span.next_btn {
         .slider_section {
             order: 2;
         }
-        /* gallery area */
         .gallery_section {
             order: 5;
         }
-        /* rankup area */
-        .rankup_section {
+        .diary_section {
             order: 6;
         }
-        /* latestpost area */
-        .latest_post_section {
+        .board_section {
             order: 3;
         }
-        /* popularpost area */
-        .popular_post_section {
+        .schedule_section {
             order: 4;
         }
-        /* banner area */
         .banner_section {
             order: 7;
         }
-        /* sns area */
-        .social_section {
+        .sns_section {
             order:8;
         }
-        /* footer area */
         .footer {
             order: 9;
         }
@@ -707,7 +744,7 @@ span.next_btn {
 
     .slider_section {
         width: 60%;
-        background-color: lightslategray;
+        background-color: gray;
         height: 440px;
     }
 
@@ -726,14 +763,14 @@ span.next_btn {
         height: 440px;
     }
 
-    .profile_section {
-        background-color: lightsteelblue;
+    .board_section {
+        background-color: lightslategray;
         width: 40%;
         height: 270px;
     }
 
     .schedule_section {
-        background-color: lightcyan;
+        background-color: lightblue;
         width: 40%;
     }
 
@@ -747,7 +784,7 @@ span.next_btn {
         flex: 1;
     }
     .banner_box_01 {
-        background-color: lightblue;
+        background-color: lightsteelblue;
     }
     .banner_box_02 {
         background-color: white;
@@ -768,31 +805,24 @@ span.next_btn {
         .slider_section {
             order: 2;
         }
-        /* gallery area */
         .gallery_section {
             order: 7;
         }
-        /* rankup area */
-        .rankup_section {
+        .diary_section {
             order: 3;
         }
-        /* latestpost area */
-        .latest_post_section {
+        .board_section {
             order: 4;
         }
-        /* popularpost area */
-        .popular_post_section {
+        .schedule_section {
             order: 5;
         }
-        /* banner area */
         .banner_section {
             order: 8;
         }
-        /* sns area */
         .sns_section {
             order: 6;
         }
-        /* footer area */
         .footer {
             order: 9;
         }

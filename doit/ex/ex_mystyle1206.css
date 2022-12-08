@@ -53,15 +53,15 @@
     width: 15%;
     height: 440px;
 }
-/* profile area */
-.profile_section {
+/* board area */
+.board_section {
     background-color: lightslategray;
     width: 30%;
     height: 270px;
 }
 /* schedule area */
 .schedule_section {
-    background-color: lightcyan;
+    background-color: lightblue;
     width: 35%;
     height: 270px;
 }
@@ -77,7 +77,7 @@
     flex: 1;
 }
 .banner_box_01 {
-    background-color: lightblue;
+    background-color: lightsteelblue;
 }
 .banner_box_02 {
     background-color: #fff;
