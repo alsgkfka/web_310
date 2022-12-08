@@ -235,7 +235,21 @@ span.next_btn {
     text-align: center;
     color: #2c3e50;
 }
-
+.board_list li {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.board_list li i {
+    display: block;
+    fill: #2c3e50 ;
+}
+.board_list li span {
+    font-size: 14px;
+    color: #2c3e50;
+    font-weight: bold;
+}
 /* banner area */
 .banner_section {}
 .banner_box_01 {

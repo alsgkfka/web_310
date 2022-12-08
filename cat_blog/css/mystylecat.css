@@ -1,0 +1,217 @@
+/* language settings */
+@charset "utf-8";
+
+/* font settings */
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
+
+/* body set */
+* {
+    margin: 0;
+    padding: 0;
+    background: beige;
+}
+ul {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+a {
+    text-decoration: none;
+    color: burlywood;
+}
+/* header set */
+.header {
+    
+}
+.logo {
+    background-color: white;
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    font-family: 'Coming Soon', cursive;
+    font-size: 36px;
+    font-weight: normal;
+    text-align: center; 
+}
+.header p {
+}
+
+/* main set */
+
+
+.container {
+    margin-top: 50px;
+}
+
+.post_home {
+    margin-bottom: 40px;
+}
+
+.post_title {
+    margin-bottom: 30px;
+    border-bottom: lightgray 10px dashed;
+}
+.post_img {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: auto;
+}
+.post_img .date {
+    font-family: 'Coming Soon', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightsteelblue;
+    top: 20;
+    left: 0;
+    position: absolute;
+    padding: 5px 10px;
+    font-size: 20px;
+    color: aliceblue;
+    border-radius: 10% 40% 45% 30%;
+    box-sizing: border-box;
+}
+.post_img span {
+    background-color:lightsteelblue;
+    border-bottom: dotted gray 2px;
+    color: aliceblue;
+    font-size: 18px;
+}
+.post_img img {
+    
+}
+.post_title h2 {}
+.post_title h2 a {}
+.post_story {
+    display: flex;
+    width: 70%;
+}
+
+.post_more {
+    display: block;
+    text-align: right;
+}
+.post_more a {
+    background-color: pink;
+    padding: 18px 20px;
+    color: aliceblue;
+    font-size: 18px;
+    border-radius: 10%;
+    border: 2px dotted palevioletred;
+
+}
+
+/* sub set */
+
+
+/* category */
+.cat {
+    padding-bottom: 20px;
+    border: 10px double lightgrey;
+    border-radius: 6%;
+}
+.cat h3 {
+    font-family: 'Coming Soon', cursive;
+    text-align: center;
+    padding-top: 20px;
+}
+.cat ul {
+    padding: 20px 10px;
+}
+.cat ul li {}
+.cat ul li a {
+    background-image: url(../img/circle-solid.svg);
+    background-repeat: no-repeat;
+    background-size: 3%;
+    background-position: left center;
+    text-indent: 20px;
+    display: block;
+    font-size: 18px;
+    position: relative;
+    padding: 10px 0;
+    border-bottom: 2px lightgray dotted;}
+    
+
+
+/* news set */
+.news {
+    padding-bottom: 20px;
+    border: 10px double lightgrey;
+    border-radius: 6%;
+}
+.news h3 {
+    font-family: 'Coming Soon', cursive;
+    text-align: center;
+    padding: 20px 0;
+}
+.news p {
+    color: gray;
+    padding-bottom: 20px;
+}
+.news form input {
+}
+
+/* popular set */
+.popular {
+    padding-bottom: 20px;
+    border: 10px double lightgrey;
+    border-radius: 6%;
+}
+.popular h3 {
+    font-family: 'Coming Soon', cursive;
+    text-align: center;
+    padding: 20px 0;
+}
+.popular ul {}
+.popular ul li {}
+.popular ul li a {
+    background-image: url(../img/circle-solid.svg);
+    background-repeat: no-repeat;
+    background-size: 3%;
+    background-position: left center;
+    text-indent: 20px;
+    display: block;
+    font-size: 18px;
+    position: relative;
+    padding: 10px 0;
+    border-bottom: 2px lightgray dotted;
+}
+
+
+/* footer set */
+.footer {
+    
+}
+.footer ul {}
+.footer ul li {}
+.footer ul li a {}
+.footer p {}
+
+
+@media (min-width:600px){
+    .container::after {
+    display: block;
+    clear: both;
+    content: "";
+    }
+    .side_section {
+    float: left;
+    width: 30%;
+    }
+    .main_section {
+    float: left;
+    width: 70%;
+    }
+}
+
+@media (min-width:1280px){
+    .main_section, 
+    .footer {
+        width: 1190px;
+        margin: 0 auto;
+    }
+}
