@@ -16,6 +16,14 @@ body {
     background-size: 40px 100%;
 }
 
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 /* __header setting__ */
 header {
     background-image: url(../img/header.svg);
@@ -178,6 +186,7 @@ header>p {
     color: #949087;
     text-decoration: none;
     padding: 16px 0;
+    flex: 1;
 }
 .side_section>div li::before {
     display: inline-block;
@@ -221,8 +230,61 @@ header>p {
     background-color: #eda1a1;
     border: none;
     color: #fff;
-    font-size: 18px;
+    font-size: 14px;
     margin-left: -5px;
+}
+
+/* __pagination setting__ */
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+.pagination li {
+    margin: 0 10px;
+}
+.pagination li a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #949087;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+.pagination li a:hover {
+    background-color: #93d8d0;
+    color: #fff;
+}
+.pagination li:last-child a:hover {
+    background-color: transparent;
+    /* --> 배경색투명 */
+    color: #949087;
+    text-decoration: underline;
+}
+.pagination .current a {
+    background-color: #ccc;
+    color: #fff;
+}
+.pagination li:first-child a:hover {
+    background-color: #ccc;
+    color: #fff;
+    opacity: 0.8;
+}
+
+/* page divider */
+.pagination li::after {
+    content: "\007C";
+    margin-left: 20px;
+    color: #ccc;
+}
+.pagination li:last-child::after {
+    content: "\0020";
+    margin-left: 20px;
+}
+.pagination li:nth-child(4)::after {
+    content: "\0020";
+    margin-left: -10;
 }
 
 
@@ -230,11 +292,29 @@ header>p {
 
 footer {
     background-color: #949087;
+    text-align: center;
+    padding: 48px;
+    margin-top: 60px;
 }
-footer ul {}
-footer li {}
-footer li a {}
-footer>p {}
+footer ul {
+    display: flex;
+    justify-content: center;
+}
+footer li {
+    margin: 0 12px;
+}
+footer li a {
+    display: block;
+    color: #fff;
+}
+footer li a:hover {
+    color: #000;
+}
+footer>p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 20px;
+}
 
 
 
