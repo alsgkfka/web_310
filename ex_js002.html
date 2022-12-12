@@ -81,13 +81,12 @@
 
 
     <script>
-        let kor = Number(prompt('국어점수는?'));
+        let kor = Number(prompt('국어점수는?'));    
         let math = Number(prompt('수학점수는?'));
         let eng = Number(prompt('영어점수는?'));
         
-        let sum = (kor+math+eng);
+        let add = (kor+math+eng);
         let avg = (kor+math+eng)/3;
-        
 
             if( avg<59 ){
             document.write('F학점입니다')
@@ -108,6 +107,8 @@
         mmth.innerHTML=math
         let Aavg = document.getElementById('avg');
         Aavg.innerHTML=avg
+        let Aadd = document.getElementById('add');
+        Aadd.innerHTML=add
     </script>
 </body>
 </html>
