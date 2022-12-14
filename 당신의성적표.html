@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+    body {
+    background-image: linear-gradient(to left, #eeeeee 50%,#ffffff 50%);
+    background-size: 20px 100%;
+    font-family: 'Do Hyeon', sans-serif;
+}
+    h1 {
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 20px;
+    color: #989898;
+}
+.table {
+    width: 80%;
+    margin: 0 auto;
+}
+.table ul {
+    text-align: center;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap; width: 100%;
+}
+.title li {
+    background-color: beige;
+    padding: 20px;
+    color: rgb(225, 140, 4);
+    font-size: 30px;
+    flex: 1;
+    margin: 0 2px; 
+}
+.write li {background-color:#f3877f;
+    height: 80px;
+    font-size: 28px;
+    color: #fff;
+    flex: 1; 
+    margin: 0 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+#result {
+    text-align: center;
+    color: #ff6688;
+    font-size: 78px;
+    margin-top: 50px;
+}
+    </style>
+</head>
+
+<body>
+    <h1>당신의성적표</h1>
+    <div class="table">
+        <ul class="title">
+            <li>국어</li>
+            <li>수학</li>
+            <li>영어</li>
+            <li>총점</li>
+            <li>평균</li>
+        </ul>
+        <ul class="write">
+            <li id="kor"></li>
+            <li id="math"></li>
+            <li id="eng"></li>
+            <li id="add"></li>
+            <li id="avg"></li>
+        </ul>
+    </div>
+
+    <div id="result"></div>
+
+
+    <script>
+        // let kor = Number(prompt('국어점수는?'));    
+        // let math = Number(prompt('수학점수는?'));
+        // let eng = Number(prompt('영어점수는?'));
+        
+        let add = (kor+math+eng);
+        let avg = (kor+math+eng)/3;
+
+
+        document.getElementById('kor').addEventListener('click',
+        function(Event){
+            alert('국어점수를 입력하세요')
+        })
+
+
+
+
+            if( avg<59 ){
+            document.write('F학점입니다')
+        }else if(avg<70 && avg>=60 ){
+            document.write('D학점입니다')
+        }else if(avg<80 && avg>=70){
+            document.write('C학점입니다')
+        }else if(avg<90 && avg>=80){
+            document.write('B학점입니다')
+        }else{document.write ('A학점입니다')}
+
+        // 자바스크립트 선택하기방법
+        let Rkor=document.getElementById('kor');
+        Rkor.innerHTML=kor
+        let Eeng=document.getElementById('eng');
+        Eeng.innerHTML=eng
+        let mmth = document.getElementById('math');
+        mmth.innerHTML=math
+        let Aavg = document.getElementById('avg');
+        Aavg.innerHTML=avg
+        let Aadd = document.getElementById('add');
+        Aadd.innerHTML=add
+    </script>
+</body>
+</html>

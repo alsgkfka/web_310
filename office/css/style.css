@@ -1,0 +1,290 @@
+/* language setting */
+@charset 'utf-8';
+
+/* fonts */
+
+
+/* body set */
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+img {
+    border: none;
+    vertical-align: bottom;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    width: 800px;
+    margin: 0 auto;
+}
+section {
+    padding: 7em 0;
+}/* 전체화면으로 옮기기전 암의설정 */
+section .wrapper {
+    padding: 4em 1em;
+}
+
+section h2 {
+    text-align: center;
+    font-family: Impact, sans-serif;
+    font-size: 80px;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+/* header set */
+header {
+    background-color: #333;
+    width: 100%;
+    padding: 16px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    display: block;
+    font-size: 24px;
+    color: #fff;
+    padding: 10px 20px;
+    font-family: Impact, sans-serif;
+}
+nav ul {
+    display: flex;
+}
+nav li {}
+nav li a {
+    display: block;
+    font-size: 24px;
+    color: #fff;
+    font-family: Impact, sans-serif;
+    padding: 10px 20px;
+}
+
+
+
+/* main set */
+.main {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 100vh ;
+    background-color: #4db1ec;
+    background-image: url(/images/hero.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.main h3 {
+    font-size: 100px;
+    font-family: Impact, sans-serif;
+    color: #333;
+    letter-spacing: 3px;
+
+}
+.main .date {
+    font-family: Impact, sans-serif;
+    font-size: 50px;
+    color: #333;
+    border-top: #333 solid 4px;
+    border-bottom: #333 solid 4px;
+    margin: 20px 0;
+    padding: 20px 0;
+
+}
+.main p {
+    line-height: 1.6;
+}
+
+/* about set */
+#about {
+    height: 100vh;
+}
+#about h2 {
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#about img {
+    width: 100%;
+    height: auto;
+}
+#about p {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* news set */
+#news {
+    background-image: radial-gradient( circle farthest-corner at 6.6% 12%,  rgba(64,0,126,1) 20.8%, rgba(0,255,160,1) 100.2% );
+    clip-path: polygon(0 0, 100% 15%, 100% 90%, 0 100%);
+}
+#news h2 {
+    color: #fff;
+    font-weight: normal;
+}
+#news ul {
+    width: 80%;
+    margin: 0 auto;
+}
+#news li a {
+    display: block;
+    color: white;
+    font-size: 16px;
+    border-bottom: solid 1px #fff;
+    padding: 20px;
+}
+#news li a:hover {
+    background-color: #fff;
+    color: darkblue;
+    font-weight: bold;
+}
+#news span {
+    display: inline-block;
+    margin-right: 10px;
+    width: 180px;
+}
+
+/* speakers set */
+#speakers {}
+#speakers h2 {
+    background: linear-gradient( rgba(83,138,214,1) 0%, rgba(134,231,214,1) 90% );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#speakers img {
+    border-radius: 50%;
+    width: 18%;
+    margin-right: 20px;
+}
+#speakers h4 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+#speakers p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+#speakers .contents01 {
+    display: flex;
+    align-items: center;
+    margin: 60px 0;
+}
+#speakers .contents01:hover img {
+    filter: blur(1px);
+}
+#speakers .contents02 {
+    display: flex;
+    align-items: center;
+}
+#speakers .contents02:hover img {
+    opacity: 0.6;
+}
+/* ticket set */
+
+#ticket {
+    background-image: linear-gradient( 103.3deg,  rgba(252,225,208,1) 30%, rgba(255,173,214,1) 55.7%, rgba(162,186,245,1) 81.8% );
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+}
+#ticket form {
+    width: 500px;
+    margin: 0 auto;
+}
+#ticket label {
+    margin-bottom: 10px;
+}
+#ticket .ticket {
+    width: 100%;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+    font-size: 16px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+#ticket .ticket:focus {
+    outline: none;
+}
+#ticket .btn {
+    width: 100%;
+    padding: 1em;
+    font-size: 16px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.5s;
+    margin-top: 20px;
+}
+#ticket .btn:hover {
+    background-color: darkmagenta;
+}
+
+
+
+/* copy set */
+.copy {
+    border-top: rgba(255, 255, 255, 0.5) solid 1px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 80px;
+    padding-top: 40px;
+}
+.copy a {
+    text-decoration: underline;
+    color: #fff;
+    margin-right: 10px;
+}
+
+
+
+
+/**** animation setting ****/
+@keyframes boldh3 {
+    0% {font-weight: bold;
+        font-size: 20px;}
+    100% {font-weight: normal;
+        font-size: 60px;}
+}
+/* .main h3 {
+    font-weight: bold;
+    font-size: 20px;
+    animation: boldh3 3s infinite alternate;
+} */
+
+@keyframes bg {
+    0% {background-color: #4db1ec;}
+    25% {background-color: #b473bf;}
+    50% {background-color: #ff9f67;}
+    75% {background-color: #a2e29b;}
+    100% {background-color: #4db1ec;}
+}
+
+.main {
+    animation: bg 24s infinite;
+}
+
+
+/* ----------media query---------- */

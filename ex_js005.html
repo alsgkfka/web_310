@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문예제</title>
+    <script src="https://use.fontawesome.com/29f84cf8f7.js"></script> 
+</head>
+<body>
+    <h1>날짜기입하기</h1>
+
+    <script>
+        let now = new Date();
+        let year = now.getFullYear();
+        let month = now.getMonth()+1;
+        let date = now.getDate();
+        let day = now.getDay();
+        let hour = now.getHours();
+        let min = now.getMinutes();
+        let sec = now.getSeconds();
+
+        // 시간은 getHours()/분 getMinutes() / 초 getSeconds()
+
+
+        // document.write(now+'<br>')
+        // document.write(year+'<br>')
+        // document.write(month+'<br>')
+        // document.write(date+'<br>')
+        // document.write(day+'<br>')
+        // document.write(hour+'<br>')
+        // document.write(min+'<br>')
+        // document.write(sec)
+
+        // 정답
+        let ss = document.getElementsByTagName('span')
+        ss[0].innerHTML = year
+        ss[1].innerHTML = month
+        ss[2].innerHTML = date
+        document.getElementById('btn').addEventListener('click',
+        function() {
+        alert('현재시간은 '+hour+'시 '+min+'분 '+sec+'초 입니다' )})
+
+    </script>
+        <div id="wrap">
+            <h1>안녕하세요</h1>
+            
+            오늘은 <span></span>년 <span></span>월 <span></span>일 입니다.
+            <p>현재시간을 확인하시려면 버튼을 클릭하세요</p>
+            <button id="btn">시간확인</button>
+        </div>
+
+    <!-- <div id="wrap">
+        <h1>안녕하세요</h1>
+        
+        <div>오늘은 <span class="year"></span>년 <span class="month"></span>월 <span class="date"></span>일 입니다.</div>
+        <p>오늘 날짜를 확인하시려면 버튼을 클릭하세요</p>
+        <button onclick="btn()">날짜확인</button>
+    </div> -->
+
+    <!-- <script>
+        // function btn() {
+        // let show = document.querySelector('span').innerHTML 
+        // if(show==(year)){
+        //     document.querySelector('.year').innerHTML = ""
+        //     document.querySelector('.month').innerHTML = ""
+        //     document.querySelector('.date').innerHTML = ""
+        //     document.querySelector('#wrap').style.background = '#fff'
+        //     document.querySelector('#wrap>div').style.color = '#000'
+        //     document.querySelector('#wrap>p').style.color = '#6A5ACD'
+        //     document.querySelector('#wrap>div').style.fontWeight = 'normal'
+        //     document.querySelector('#wrap>h1').style.color = '#000'
+        // }
+        // else if(show=="") {
+        //     document.querySelector('.year').innerHTML = (year)
+        //     document.querySelector('.month').innerHTML = (month)
+        //     document.querySelector('.date').innerHTML = (date)
+        //     document.querySelector('#wrap').style.background = '#6A5ACD'
+        //     document.querySelector('#wrap>div').style.color = '#FFFFE0'
+        //     document.querySelector('#wrap>div').style.fontWeight = 'bold'
+        //     document.querySelector('#wrap>h1').style.color = '#B0E0E6'
+
+        // }
+        // }
+    </script> -->
+
+</body>
+</html>
