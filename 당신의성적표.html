@@ -91,9 +91,16 @@
 
         document.getElementById('kor').addEventListener('click',
         function(Event){
-            alert('국어점수를 입력하세요')
+        Number(prompt('국어점수를 입력하세요.'))
         })
-
+        document.getElementById('eng').addEventListener('click',
+        function(Event){
+        Number(prompt('영어점수를 입력하세요.'))
+        })
+        document.getElementById('math').addEventListener('click',
+        function(Event){
+        Number(prompt('수학점수를 입력하세요.'))
+        })
 
 
 
