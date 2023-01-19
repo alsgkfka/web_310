@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_요소선택</title>
+</head>
+<body>
+    <h1>요소선택</h1>
+    <p>DOM(Document Object Model)의 html 요소를 선택,생성,삭제 등을 </p>
+
+    <h2>직접선택메서드</h2>
+    <table border="1">
+        <tr>
+            <td>메서드이름</td>
+            <td>설명</td>
+        </tr>
+        <tr>
+            <td>getElementByID('')</td>
+            <td>HTML요소 중 ID 속성인 요소만 부름</td>
+        </tr>
+        <tr>
+            <td>getElementsByClassName('')</td>
+            <td>HTML요소 중 class 속성인 요소를 모두 부름</td>
+        </tr>
+        <tr>
+            <td>getElementsByTagName('')</td>
+            <td>HTML요소 중 tag의 요소를 모두 부름</td>
+        </tr>
+        <tr>
+            <td>querySelector('')</td>
+            <td>선택된 요소 중 첫번째 요소만 선택 / 
+                태그를 제외하고 클래스, 아이디를 부를 때는 css와 동일하게 부름
+            </td>
+        </tr>
+        <tr>
+            <td>querySelectorAll('')</td>
+            <td>getElementsByTagName과 같은 성질
+                단, tagname외 다른 중복 요소 및 클래스도 반영가능
+            </td>
+        </tr>
+    </table>
+
+    <div id="ex">
+        <div class="box1 current">
+            <ul>
+                <li>리스트1</li>
+                <li>리스트2</li>
+                <li>리스트3</li>
+            </ul>
+        </div>
+        <div class="box2 current">
+            <ul>
+                <li>리스트1</li>
+                <li>리스트2</li>
+                <li>리스트3</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('ex').style.background='#666666'
+
+        let ex = document.getElementById('ex');
+        let box1 = document.getElementsByClassName('box1')[0];
+        let box = document.getElementsByClassName('current');
+        let list = document.querySelector('.box1>ul>li');
+        let listAll = document.querySelectorAll('.box2>ul>li');
+
+
+        ex.style.color = '#ffffff'
+        box1.style.background = '#ffff00'
+        box[1].style.background = '#ff0000'
+        list.style.color = '#000'
+        listAll.style.color = '#000';
+        listAll.item(1).style.background = '#000';
+
+    </script>
+
+    <h2>Event</h2>
+    <p>선택자 혹은 도큐먼트상에서 행동을 가했을때 발생되는 현상</p>
+    <table border="1">
+        <tr>
+            <td>이벤트</td>
+            <td>설명</td>
+        </tr>
+        <tr>
+            <td>click</td>
+            <td>마우스를 클릭했을때 이벤트 발생</td>
+        </tr>
+        <tr>
+            <td>mouseover</td>
+            <td>마우스가 오버했을때 이벤트 발생</td>
+        </tr>
+        <tr>
+            <td>mousemove</td>
+            <td>마우스가 움직였을때 이벤트 발생</td>
+        </tr>
+        <tr>
+            <td>mouseenter</td>
+            <td>마우스가 들어갔을때 이벤트 발생</td>
+        </tr>
+        <tr>
+            <td>mouseleave</td>
+            <td>마우스가 떠났을때 이벤트 발생</td>
+        </tr>
+
+        <tr>
+            <td>submit</td>
+            <td>submit을 눌렀을때 이벤트 발생</td>
+        </tr>
+        <tr>
+            <td>load</td>
+            <td>페이지를 열었을때 이벤트 발생</td>
+        </tr>
+        <tr>
+            <td>resize</td>
+            <td>사이즈가 변경되었을때 이벤트 발생</td>
+        </tr>
+        <tr>
+            <td>scroll</td>
+            <td>스크롤바가 움직였을때 이벤트 발생</td>
+        </tr>
+
+    </table><br>
+
+    <div class="ex002">
+        <!-- inline 방식의 이벤트 구현 -->
+        <button onclick="showTxt()">click me</button>
+        <p></p>
+        <p></p>
+        <p></p>
+        <button onclick="letsPrac()">연습해봅시다</button>
+    </div>
+
+    <!-- addEventListener -->
+    <button id="btn">직접연결창</button>
+
+    <script>
+        function showTxt() {
+
+            let show = document.querySelector('.ex002>p').innerHTML 
+            if(show=='Hello'){
+                document.querySelector('.ex002>p').innerHTML = ''
+            }
+            else if(show=='') {
+                document.querySelector('.ex002>p').innerHTML = 'Hello'
+            }
+        }
+
+
+        function letsPrac() {
+            let show = document.querySelector('.ex002>p').innerHTML
+            if(show== '<h2>자바 연습중</h2>'){
+                document.querySelector('.ex002>p').innerHTML = ''
+                document.querySelector('body').style.background = '#fff'
+                document.querySelector('body').style.color = '#000'
+                document.querySelector('body').style.fontWeight = 'normal'
+            }
+            else if(show==''){
+                document.querySelector('.ex002>p').innerHTML = '<h2>자바 연습중</h2>'
+                document.querySelector('body').style.background = '#483D8B'
+                document.querySelector('body').style.color = '#F0F8FF'
+                document.querySelector('body').style.fontWeight = 'bold'
+            }
+        }
+
+
+        document.getElementById('btn').addEventListener('click',
+        function(Event){
+            alert('성공하셨습니다!')
+        })
+
+    </script>
+
+</body>
+</html>

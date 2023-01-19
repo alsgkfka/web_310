@@ -1,0 +1,97 @@
+/* language */
+@charset "UTF-8";
+
+/* settings */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#wrap {
+    display: flex;
+    flex-flow: row wrap;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* header area */
+.header {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: flex-end; 
+}
+.header>h1 {
+    background-color: lemonchiffon;
+    width: 12%;
+    height: 110px;
+    position: absolute;
+    left: 0; top: 10;
+    padding: 10px 0;
+}
+.header>nav {
+    background-color: lemonchiffon;
+    width: 88%;
+    height: 70px;
+}
+
+/* slider area */
+.slider_section {
+    background-color: grey;
+    width: 60%;
+    height: 440px;
+}
+/* gallery area */
+.gallery_section {
+    background-color:lightgray;
+    width: 25%;
+    height: 440px;
+}
+/* diary area */
+.diary_section {
+    background-color: white;
+    width: 15%;
+    height: 440px;
+}
+/* board area */
+.board_section {
+    background-color: lightslategray;
+    width: 30%;
+    height: 270px;
+}
+/* schedule area */
+.schedule_section {
+    background-color: lightblue;
+    width: 35%;
+    height: 270px;
+}
+
+/* banner area */
+.banner_section {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 270px;
+}
+.banner_section>div {
+    flex: 1;
+}
+.banner_box_01 {
+    background-color: lightsteelblue;
+}
+.banner_box_02 {
+    background-color: #fff;
+}
+/* sns area */
+.sns_section {
+    background-color:#000;
+    width: 15%;
+    height: 270px;
+}
+/* footer area */
+.footer {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: #333;
+} 

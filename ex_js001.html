@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문예제</title>
+</head>
+<body>
+    <script>
+        //질문창을 통해 20살 이상이면 당신은 성인입니다. 아니면 당신은 청소년입니다. 
+        //라는 문구 출력하기
+
+        let age= prompt('당신은 몇살입니까?')
+        // document.write('당신은'+age+'살입니다')
+
+        // if( age>=20 ){
+        //     document.write('당신은 성인입니다.') }
+        // else{
+        //     document.write('당신은 청소년입니다')
+        // }
+
+
+        if( age<20 ){
+            document.write('당신은 10대입니다.')
+        }else if(age>=20 && age<30 ){
+            document.write('당신은 20대입니다')
+        }else if(age>=30 && age<40){
+            document.write('당신은 30대입니다')
+        }else{document.write ('당신은 4,5,60대 입니다')}
+
+        
+    </script>
+</body>
+</html>

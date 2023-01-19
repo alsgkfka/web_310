@@ -72,6 +72,66 @@ a {
     width: 100%;
     height: auto;
 }
+/* sns set */
+.sns {
+    margin-top: 40px;
+}
+.sns ul {
+    display: flex;
+}
+.sns ul li {
+    flex: 1;
+}
+.sns ul li a {
+    display: block;
+    text-align: center;
+    background-color: #ddd;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 12px;
+}
+.sns ul li:nth-child(1) a {background-color: #1da1f2;}
+.sns ul li:nth-child(2) a {background-color: #1877f2;}
+.sns ul li:nth-child(3) a {/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5851db+0,c13584+34,f77737+70,fcaf45+100 */
+    background: #5851db; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #5851db 0%, #c13584 34%, #f77737 70%, #fcaf45 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #5851db 0%,#c13584 34%,#f77737 70%,#fcaf45 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #5851db 0%,#c13584 34%,#f77737 70%,#fcaf45 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5851db', endColorstr='#fcaf45',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    }
+
+.sns ul li a i {}
+
+/* relation */
+.relation {
+    margin-top: 40px;
+    background-color: #f0f0d4;
+    padding: 20px;
+}
+.relation h3 {
+    margin-top: 0;
+    color: #727224;
+    margin-bottom: 5px;
+}
+.relation ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.relation ul li {
+    float: left;
+    width: 25%;
+}
+.relation li a {
+    display: block;
+    padding: 5px;
+    font-size: 12px;
+    text-align: center;
+
+}
+.relation  ul li a img {
+    width: 100%;
+}
 
 /* sidemenu set */
 .sidemenu {
@@ -85,13 +145,17 @@ a {
     color: #666;
 }
 .sidemenu ul {}
-.sidemenu li {}
+
 .sidemenu li a {
     display: block;
     padding: 5px;
     font-size: 14px;
 }
-
+.sidemenu li i {
+    color: #888;
+    margin-right: 5px;
+    font-size: 16px;
+}
 /* recommend set */
 .recommend {
     margin-bottom: 30px;
@@ -107,8 +171,26 @@ a {
 .recommend li {}
 .recommend li a {
     display: block;
-    padding: 5px;
+    padding: 0px;
     font-size: 14px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.recommend li a img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+.recommend .text {
+    position: absolute;
+    bottom: 0; left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 /* popular set */
@@ -126,6 +208,28 @@ a {
     display: block;
     padding: 5px;
     font-size: 14px;
+    color: #2288bb;
+    border-bottom: 1px dotted #ddd;
+}
+.popular li a::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+.popular img {
+    float: left;
+    width: 60px;
+}
+.popular .text {
+    float: none;
+    width: auto;
+    padding-left: 10px;
+}
+
+.popular span {
+    display: block;
+    color: #666;
+    font-size: 12px;
 }
 
 /* footer set */
@@ -185,13 +289,58 @@ a {
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box
     }
+    .box1, .boxA, .box5 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
 
 /*-------------------------- media query-------------------------- */
-/* mobile */
+/* 1.normal-((((mobile)))) 599px or less---------- */
+@media (max-width:599px){
+    /* sns */
+    .sns span {
+        display: inline-block;
+        text-indent: -9999px;
+    }
+    /* relation article */
+    .relation ul li {
+        float: left;
+        width: 50%;
+    }
+    .relation li a {
+        display: block;
+        padding: 5px;
+        font-size: 12px;
+        text-align: center;
+    }
+    .relation li:nth-child(odd) {
+        clear: both;
+    }
+    /* odd - 홀수, even - 짝수 */
+}
 
+/* 2.max-((((mobile)))) 600px ~ 767px or less---------- */
+@media (min-width:600px) and (max-width:767px){
+    /* box4-1 & 4-2 가로정렬 */
+    .box4-1 {
+        float: left;
+        width: 49%;
+    }
+    .box4-2 {
+        float: right;
+        width: 49%;
+    }
+    .box4::after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+
+}
 /*  --------((tablet)) 768px or more----------*/
-@media(min-width:768px){
+@media (min-width:768px){
     .box3 {
         width: 70%;
         float: left;
@@ -208,7 +357,7 @@ a {
 }
 
 /* -------------((web)) 1280px or more -------------*/
-@media (min-width:1280px) {
+@media (min-width:1280px){
     .box1,
     .boxA,
     .copyright,

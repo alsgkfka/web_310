@@ -24,11 +24,11 @@ a {
 .logo a {
     font-family: 'Pacifico', cursive;
     font-size: 30px;
-    color: purple;
+    color:rgb(14, 43, 30);
 }
 /* menu set */
 .box2 {
-    background-color:lavenderblush;
+    background-color:rgb(33, 45, 36);
 }
 .gnb {}
 .gnb ul {
@@ -42,6 +42,7 @@ a {
     padding: 15px;
     font-size: 18px;
     font-weight: bold;
+    color: floralwhite;
 }
 /* article set */
 .story {}
@@ -53,9 +54,10 @@ a {
 .story time {
     font-style: italic;
     color: #555;
+    font-size: 14px;
 }
 .story img {
-    width: 100%;
+    width: 80%;
     height: auto;}
 .story h3 {
     font-size: 24px;
@@ -69,6 +71,70 @@ a {
     margin-bottom: 20px;
 }
 
+/* sns set */
+.sns {
+    margin-top: 40px;
+}
+.sns ul {
+    display: flex;
+}
+.sns ul li {
+    flex: 1;
+    font-weight: bold;
+}
+.sns ul li:nth-child(1) a {
+    background-color: #f9e100;
+}
+.sns ul li:nth-child(2) a {
+    background-color: #1877f2;
+}
+.sns ul li:nth-child(3) a {/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5851db+0,c13584+34,f77737+70,fcaf45+100 */
+    background: #5851db; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #5851db 0%, #c13584 34%, #f77737 70%, #fcaf45 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #5851db 0%,#c13584 34%,#f77737 70%,#fcaf45 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #5851db 0%,#c13584 34%,#f77737 70%,#fcaf45 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5851db', endColorstr='#fcaf45',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.sns ul li a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;
+    color: #fff;
+}
+.sns ul li i {}
+/* relation set */
+.relation {
+    margin-top: 40px;
+    background-color: blanchedalmond;
+    padding: 20px;
+}
+.relation h3 {
+    margin-top: 0;
+    color: brown;
+    margin-bottom: 5px;
+}
+.relation ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.relation li {
+    float: left;
+    width: 25%;
+}
+.relation li a {
+    display: block;
+    padding: 5px;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+.relation li img {
+    width: 100%;
+}
+.relation li div {}
+
 /* latest set */
 .latest {
     margin-bottom: 30px;
@@ -76,7 +142,7 @@ a {
 .latest h3 {
     margin-top: 0;
     margin-bottom: 10px;
-    border-bottom: dotted lavenderblush 5px;
+    border-bottom: dotted lightcoral 2px;
     font-size: 18px;
 }
 .latest ul {}
@@ -94,8 +160,9 @@ a {
 .recommend h3 {
     margin-top: 0;
     margin-bottom: 10px;
-    border-bottom: dotted lavenderblush 5px;
+    border-bottom: dotted lightcoral 2px;
     font-size: 18px;
+    color: #555;
 }
 .recommend ul {}
 .recommend li {}
@@ -104,7 +171,30 @@ a {
     padding: 5px;
     font-size: 15px;
     color: #555;
+    position: relative;
+    margin-bottom: 12px;
+    border-bottom: #ddd dotted 1px;
 }
+.recommend li a::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+.recommend img {
+    float: left;
+    width: 60px;
+}
+.recommend .text {
+    float: none;
+    width: auto;
+    padding-left: 10px;
+}
+.recommend span {
+    display: block;
+    color: brown;
+    font-size: 14px;
+}
+
 /* popular set */
 .popular {
     margin-bottom: 30px;
@@ -112,16 +202,33 @@ a {
 .popular h3 {
     margin-top: 0;
     margin-bottom: 10px;
-    border-bottom: dotted lavenderblush 5px;
+    border-bottom: dotted lightcoral 2px;
     font-size: 18px;
 }
 .popular ul {}
 .popular li {}
 .popular li a {
     display: block;
-    padding: 5px;
     font-size: 15px;
+    position: relative;
     color: #555;
+    margin-bottom: 10px;
+}
+.popular li a img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+.popular .text {
+    position: absolute;
+    bottom: 0; left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 /* footer set */
@@ -154,9 +261,59 @@ a {
     padding-top: 15px;
     padding-bottom: 15px;
 }
+/* --left-right-- */
+.box3 {
+    padding-right: 50px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box
+}
+.box1, .boxA, .box5 {
+    padding-left: 20px;
+    padding-right: 10px;
+}
 
 /* ------------------------media queary---------------------------- */
-/* mobile */
+/* 1.(((normal-mobile)))---599px or less */
+@media (max-width:599px){
+    /* sns */
+    .sns span {
+        display: inline-block;
+        text-indent: -9999px;
+    }
+    /* relation article */
+    .relation ul li {
+        float: left;
+        width: 50%;
+    }
+    .relation li a {
+        display: block;
+        padding: 5px;
+        font-size: 13px;
+        text-align: center;
+    }
+    .relation li:nth-child(odd) {
+        clear: both;
+    }
+}
+/* 2.(((max-mobile)))---600px~767px or less */
+@media (min-width:600) and (max-width:767px) {
+    .box4-1 {
+        width: 60%;
+        float: left;
+    }
+    .box4-2 {
+        float: left;
+        width: 40%;
+    }
+    .box4::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+
+    
+}
 /* ((tablet)) 768px or more */
 @media (min-width:768px){
     .box3 {

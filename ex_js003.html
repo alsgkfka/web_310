@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문예제</title>
+</head>
+<body>
+    <h1>반복문출력</h1>
+
+    <script>
+        document.write('<h2>while문작성</h2>')
+
+        //while문
+        //변수등록
+
+        let i = 0;
+        while(i<10){
+            document.write(i)
+            i++
+        }
+
+        // for문
+        for(var a=0; a<10; a++){
+            document.write(a)
+        }
+
+        // 문제
+        document.write('<h1>h1은 heading태그의 1번입니다.</h1>')
+        document.write('<h2>h2은 heading태그의 2번입니다.</h2>')
+        document.write('<h3>h3은 heading태그의 3번입니다.</h3>')
+        document.write('<h4>h4은 heading태그의 4번입니다.</h4>')
+        document.write('<h5>h5은 heading태그의 5번입니다.</h5>')
+        document.write('<h6>h6은 heading태그의 6번입니다.</h6>')
+
+        // 반복문으로 작성하기
+        let b = 1;
+        while(b<7){
+            document.write('<h'+b+'>h'+b+'은 heading태그의 '+b+'번입니다.</h'+b+'>')
+            b++;
+        }
+
+        //
+
+        for(var a=1; a<7; a++){
+            document.write('<h'+a+'>h'+a+'은 heading태그의 '+a+'번입니다.</h'+a+'>')
+        }
+
+    </script>
+</body>
+</html>
