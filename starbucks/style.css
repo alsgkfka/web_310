@@ -1,0 +1,276 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+ul {
+    list-style: none;
+}
+img {
+    border: none;
+    vertical-align: bottom;
+}
+body {
+    font-family: 'nbg', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
+    font-size: 1em;
+    line-height: 1;}
+
+/* header set */
+header {
+    background-color: #f6f5ef;
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section {
+    width: 100%;
+    height: 800px;
+    position: relative;
+}
+#wrapper {
+    width: 1280px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+header #wrapper {
+    display: flex;
+    align-items: center;
+}
+header h1 {
+    width: 10%;
+}
+header img {}
+
+nav {
+    width: 90%;
+}
+nav .util {
+    display: flex;
+    justify-content: flex-end;
+}
+nav .util ul {
+    display: flex;
+    justify-content: flex-end;
+}
+nav .util li {}
+nav .util a {
+    display: block;
+    padding: 10px;
+}
+nav .search {
+    background-color: #fff;
+    border: solid #666 1px;
+    position: relative;
+    width:40px;
+    border-radius: 4px;
+}
+nav .search input {
+    display: inline-block;
+    width: 120px;
+    margin-top: 2px;
+    padding: 3px 10px;
+    border: none;
+    font-size: 14px;e;
+    opacity: 0;
+}
+nav .search a {
+    position: absolute;
+    right: 0;
+    top: -5px;
+}
+nav .search img {}
+
+nav .gnb {
+    display: flex;
+    justify-content: flex-end;
+}
+nav .gnb>li {}
+nav .gnb>li>a {
+    display: block;
+    padding: 10px 20px;
+}
+nav .gnb>li>ul {
+    display: none;
+}
+
+    
+/* sub menu */
+.sub_menu {
+    display: none;
+    position: relative;
+}
+.sub_menu .sub1 {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #000;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.sub_menu #wrapper {
+    display: flex;
+}
+.sub_menu>div {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: none;
+}
+.sub1 {
+    display: none;
+}
+.sub1 ul {
+    width: 20%;
+}
+.sub1 li {}
+.title {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* con1 set */
+.con1 {
+    margin-top: 120px;
+    background:url(https://image.istarbucks.co.kr/upload/common/img/main/2023/2023_newyear_top_bg.jpg) no-repeat ;
+    background-size: cover;
+    width: 100%;
+    height: 650px;
+}
+.con1 #wrapper {
+    display: flex;
+}
+.con1 .luck1 {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+    opacity: 0;
+}
+.luck1 .more {
+    cursor: pointer;
+    margin-top: 50px;
+    border: solid 2px #046241;
+    padding: 10px 25px;
+    border-radius: 5px;
+    transition: all 0.8s;
+    font-size: 15px;
+    color: #046241;
+}
+.luck1 .more:hover {
+    background-color: #046241;
+    border: solid 2px #046241;
+    border-radius: 5px;
+    text-decoration: underline #fff solid;
+    color: #fff;
+}
+.con1 .luck1 img {
+    max-width: 100%;
+}
+.con1 .img_g {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.con1 .img_g>div {
+    position: relative;
+    width: 30%;
+    height: 100%;
+}
+.con1 .img_g img {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+}
+.tea1 {
+    opacity: 0;
+}
+.tea2 {
+    opacity: 0;
+    z-index: 10;
+}
+.tea3 {
+    opacity: 0;
+    top: 0;
+}
+.tea1 img {
+    top: 20%;
+    left: 10%;
+}
+.tea2 img {
+    top: 30%;
+    left: -20%;
+}
+.tea3 img {
+    top: 20%;
+    left: -40%;
+}
+/* con2 set */
+.con2 {
+    width: 100%;
+    height: 100px;
+    background-color: #222;
+}
+
+/* con3 set */
+.con3 {
+    background: url(https://image.istarbucks.co.kr/upload/common/img/main/2023/2023_newyear_promotion_bg.jpg) no-repeat center center;
+    background-size: contain;
+    width: 100%;
+    height: 650px;
+}
+.con3 #wrapper {
+    position: relative;
+}
+.promo_txt {
+    width: 50%;
+    text-align: center;
+    padding-top: 150px;
+    position: absolute;
+    box-sizing: border-box;
+    right: -20%;
+    top: 150px;
+}
+.promo_img {
+    width: 50%;
+    text-align: center;
+    padding-top: 150px;
+    box-sizing: border-box;
+    position: absolute;
+    left: -20%;
+}
+.promo_txt .more {
+    width: 20%;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-left: 100px;
+    border: solid 2px #633510;
+    padding: 10px 10px;
+    border-radius: 5px;
+    transition: all 0.8s;
+    font-size: 15px;
+    color: #633510;
+}.promo_txt .more:hover {
+    background-color: #633510;
+    border: solid 2px #633510;
+    border-radius: 5px;
+    text-decoration: underline #fff solid;
+    color: #fff;
+}

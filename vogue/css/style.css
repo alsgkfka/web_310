@@ -1,0 +1,345 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+/* settings */
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #bbb;
+}
+img {
+    border: none;
+    vertical-align: bottom;
+}
+body {
+    font-family: 'Orbitron', sans-serif;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+}
+
+/* wrap set */
+#wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    perspective: 900px;
+    /* --원근감 설정 : 수치가 작을수록 왜곡심함 */
+
+}
+
+/* menu btn */
+.btnMenu {
+    position: fixed;
+    display: inline-block;
+    color: #111;
+    font-size: 40px;
+    left: 40px;
+    top: 40px;
+    z-index: 3;
+}
+.btnMenu i {
+    cursor: pointer;
+}
+
+/* navi set */
+nav {
+    background-color: #eee;
+    position:fixed ;
+    height: 100%;
+    width: 150px;
+    z-index: 2;
+    /* opacity: 0; */
+}
+/* nav open */
+nav {
+    transform: rotateY(120deg);
+    transform-origin: left top;
+    transition: all 1.2s;
+    opacity: 0;
+    z-index: 2;
+}
+nav.on {
+    transform: rotateY(15deg);
+    opacity: 1;
+}
+nav h1 {
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 80px;
+}
+nav h1 img {
+    width: 100%;
+    height: auto;
+}
+#gnb {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    width: 100%;
+}
+#gnb li {}
+#gnb a {
+    display: block;
+    font-size: 18px;
+    line-height: 4;
+    text-align: center;
+    color: #000;
+    transition: all 0.5s;
+}
+#gnb a:hover { 
+    color:#fff;background:#000;
+}
+
+
+/* section set */
+section {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #fff;
+    transition: all 0.6s;
+}
+/* section open */
+section.on {
+    transform: rotateY(-10deg);
+}
+section>div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    perspective: 100px;
+}
+section>div>p {
+    text-align: center;
+    transform: rotateY(180deg);
+    transition: all 1.5s;
+}
+
+section>div.on {
+    opacity: 1;
+    z-index: 2;
+}
+section>div.on>p {
+    transform: rotateY(0deg);
+}
+section p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+section strong {
+    font-size: 50px;
+}
+section span {
+    font-size: 20px;
+}
+section i {
+    font-size: 30px !important;
+    color: #eee;
+    margin: 0 20px;
+    transition: all 0.6s;
+    opacity: 0.8;
+}
+section i:hover {
+    color: #fff;
+    scale: 1.2;
+    opacity: 1;
+}
+/* box1 set */
+.box1>p {
+    float: left;
+    height: 25%;
+    width: 25%;
+}
+.box1>p:nth-child(1) {
+    background-color: #ddd;
+    width: 50%;
+
+}
+.box1>p:nth-child(2) {
+    background-color: #ccc;
+    background-image: url(../img/m1.jpg);
+    background-size: cover;
+}
+.box1>p:nth-child(3) {
+    background-color: #bbb;
+}
+.box1>p:nth-child(4) {
+    background-color: #aaa;
+    float: right;
+    height: 50%;
+    width: 50%;
+    background-image: url(../img/m2.jpg);
+    background-size: cover;
+}
+.box1>p:nth-child(5) {
+    background-color: #fff;
+    float: right;
+    background: url(../img/m3.jpg) no-repeat left center;
+    background-size: contain;
+
+}
+.box1>p:nth-child(6) {
+    background-color: #888;
+    float: right;
+}
+.box1>p:nth-child(7) {
+    background-color: #777;
+    float: right;
+}
+.box1>p:nth-child(8) {
+    background-color: #666;
+    float: right;
+    background: url(../img/m4.jpg) no-repeat center center;
+    background-size: cover;
+}
+.box1>p:nth-child(9) {
+    background-color: #555;
+}
+.box1>p:nth-child(10) {
+    background-color: #444;
+    width: 50%;
+    background: url(../img/m5.jpg) no-repeat center center;
+    background-size: cover;
+}
+.box1>p:nth-child(11) {
+    background-color: #333;
+}
+
+/* box2 set */
+.box2>p {
+    float: left;
+    width: 25%;
+    height: 25%;
+}
+.box2>p:nth-child(1) {
+    background-color: #ddd;
+}
+.box2>p:nth-child(2) {
+    background-color: #ccc;
+    background: url(../img/w1.jpg) no-repeat center;
+    background-size: contain;
+}
+.box2>p:nth-child(3) {
+    background-color: #bbb;
+    width: 50%;
+}
+.box2>p:nth-child(4) {
+    background-color: #aaa;
+    height: 50%;
+    background: url(../img/w2.jpg) no-repeat right;
+    background-size: cover;
+}
+.box2>p:nth-child(5) {
+    background-color: #999;
+    height: 50%;
+    width: 50%;
+    background: url(../img/w3.jpg) no-repeat center;
+    background-size: cover;
+}
+.box2>p:nth-child(6) {
+    background-color: #888;
+    background: url(../img/w4.jpg) no-repeat center ;
+    background-size: cover;
+}
+.box2>p:nth-child(7) {
+    background-color: #777;
+}
+.box2>p:nth-child(8) {
+    background-color: #666;
+    background: url(../img/w5.jpg) no-repeat center;
+    background-size: cover;
+}
+.box2>p:nth-child(9) {
+    background-color: #555;
+}
+.box2>p:nth-child(10) {
+    background-color: #444;
+    background: url(../img/w6.jpg) no-repeat center;
+    background-size: cover;
+}
+.box2>p:nth-child(11) {
+    background-color: #333;
+    background: url(../img/w7.jpg) no-repeat center;
+    background-size: cover;
+}
+
+/* box3 set */
+.box3>p {
+    float: left;
+}
+.box3>p:nth-child(1) {
+    background-color: #ddd;
+    height: 100%;
+    width: 50%;
+    background: url(../img/k1.jpg) no-repeat center; 
+    background-size: cover;
+}
+.box3>p:nth-child(2) {
+    background-color: #ccc;
+    height: 25%;
+    width: 25%;
+}
+.box3>p:nth-child(3) {
+    background-color: #bbb;
+    height: 25%;
+    width: 25%;
+    background: url(../img/k2.jpg) no-repeat center;
+    background-size: cover; 
+}
+.box3>p:nth-child(4) {
+    background-color: #aaa;
+    width: 50%;
+    height: 25%;
+}
+.box3>p:nth-child(5) {
+    background-color: #111;
+    width: 25%;
+    height: 50%;
+    background: url(../img/k3.jpg) no-repeat center;
+    background-size: cover; 
+}
+.box3>p:nth-child(6) {
+    background-color: #222;
+    width: 25%;
+    height: 25%;
+}
+.box3>p:nth-child(7) {
+    background-color: #333;
+    width: 25%;
+    height: 25%;
+    background: url(../img/k4.jpg) no-repeat center;
+    background-size: cover; 
+}
+
+/* btn animation */
+.btnMenu {
+    transform: scale(1);
+    color: #fff;
+    animation: ani 0.5s infinite alternate;
+}
+@keyframes ani {
+    0% {
+        transform: scale(1);
+        color: #fff;
+    }
+    100% {
+        transform: scale(1.5);
+        color: #888;
+    }
+}

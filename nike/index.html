@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIKE</title>
+    <script src="https://kit.fontawesome.com/380f7508ab.js" crossorigin="anonymous"></script>
+    <!-- style sheet -->
+    <link rel="stylesheet" href="css/style.css">
+    
+
+    <!-- 학습내용
+        1.배경 동영상 삽입
+        2.옆으로 누워있는 형태 트랜스폼으로 만들기
+        3.2뎁스 메뉴 만들기
+        4.자동으로 움직이는 애니메이션 버튼만들기
+        5.마우스오버시 순차적으로 움직이는 엘리먼트 만들기-->
+        
+</head>
+<body>
+<div class="vid">
+    <video autoplay loop src="img/nike.mp4" type="video/mp4"></video>
+</div>
+
+<h1 class="logo">
+    <img src="img/logo2.png" alt="nikelogo">
+</h1>
+<header>
+    <nav>
+        <ul id="gnb">
+            <li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i><em>About NIKE</em></a>
+                <ul>
+                    <li><a href="#"><em>English</em></a></li> 
+                </ul></li>  
+                <li><a href="#"><em>Brand Info</em></a>
+                    <ul>
+                    <li><a href="#"><em>Sub</em></a></li>
+                </ul></li>
+            <li><a href="#"><em>Community</em></a>
+                <ul>
+                    <li><a href="#"><em>Sub</em></a></li>
+                    <li><a href="#"><em>Sub</em></a></li>
+                    <li><a href="#"><em>Sub</em></a></li>
+                </ul></li>
+            <li><a href="#"><em>Product Value</em></a>
+                <ul>
+                    <li><a href="#"><em>Sub</em></a></li>
+                    <li><a href="#"><em>Sub</em></a></li>
+                </ul></li>
+            <li><a href="#"><em>Company History</em></a>
+                <ul>
+                    <li><a href="#"><em>Sub</em></a></li>
+                    <li><a href="#"><em>Sub</em></a></li>
+                </ul></li>
+        </ul>
+    </nav>
+</header>
+
+<ul id="sns">
+    <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i><span>페이스북</span></a></li>
+    <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i><span>트위터</span></a></li>
+    <li><a href=""><i class="fa fa-youtube" aria-hidden="true"></i><span>유튜브</span></a></li>
+    <li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i><span>구글플러스</span></a></li>
+    <li><a href=""><i class="fa fa-android" aria-hidden="true"></i><span>안드로이드</span></a></li>
+</ul>
+
+<section class="txtBox">
+    <p class="txt">Best Qualified<b>AIR MAX</b></p>
+    <p class="big">50<em>/24</em></p>
+    
+</section>
+<section class="side">
+    <div>
+        <p><span>Event & Community</span>
+            <img src="img/pic1.png" alt=""></p>
+        <p><span>News & Notice</span>
+            <img src="img/pic2.png" alt=""></p>
+        <p><span>Product Review</span>
+            <img src="img/pic3.png" alt=""></p>
+    </div>
+    <article>
+        <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+        <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+        <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+    </article>
+</section>
+
+
+
+    <!-- tranform study
+    <div id="scale">
+        <div class="box1">
+            <p>scale(1.2) <br> - x축 y축 비율</p>
+        </div>
+        <div class="box2">
+            <p>scaleX(1.5) <br> - x축 비율</p>
+        </div>
+        <div class="box3">
+            <p>scaleY(0.5) <br> - y축 비율</p>
+        </div>
+    </div>
+    <div id="rotate">
+        <div class="box1">
+            <p>rotate(30deg) <br> - 정수는 시계방향</p>
+        </div>
+        <div class="box2">
+            <p>transform: rotate(-45deg) <br> - 음수는 반시계 방향</p>
+        </div>
+        <div class="box3">
+            <p>transform: rotate(30deg);
+                transform-origin: right top; <br> - </p>
+        </div>
+    </div>
+    <div id="skew">
+        <div class="box1">
+            <p>skew(30deg,30deg) <br> -숫자 하나 = x 축</p>
+        </div>
+        <div class="box2">
+            <p>skewX(-30deg) <br> x축이동</p>
+        </div>
+        <div class="box3">
+            <p>skewY(30deg) <br> y축이동</p>
+        </div>
+    </div>
+    <div id="translate">
+        <div class="box1">
+            <p> translate(100px, 100px) <br> - 숫자 하나 = x축 <br>
+            (x,y) 이동</p>
+        </div>
+        <div class="box2">
+            <p>translateX(100px) <br> x축이동</p>
+        </div>
+        <div class="box3">
+            <p>translateY(100px) <br> y축이동</p>
+        </div>
+    </div>
+
+    <div id="rotate_3d">
+        <div class="box1">
+            <p></p>
+        </div>
+        <div class="box2">
+            <p></p>
+        </div>
+        <div class="box3">
+            <p></p>
+        </div>
+    </div>
+    <div id="translate_z">
+        <div class="box01">
+            <p>box01</p>
+        </div>
+        <div class="box02">
+            <p>box02</p>
+        </div>
+        <div class="box03">
+            <p>box03</p>
+        </div>
+    </div>
+
+    <style>
+        #translate_z {
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            position: relative;
+            perspective: 1600px;
+        }
+        #translate_z div {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        .box01 {
+            transform: translateZ(-500px);
+        }
+        .box02 {
+            transform: translateZ(0);
+        }
+        .box03 {
+            transform: translateZ(500px);
+        }
+
+
+        #scale, #rotate, #skew, #translate, #rotate_3d {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 50px;
+            margin-top: 50px;
+        }
+        .box1, .box2, .box3 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            /* overflow: hidden; */
+        }
+        p {
+            background-color: rgba(0, 0, 0, 0.6);
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        #scale .box1 p {
+            transform: scale(1.2);
+        }
+        #scale .box2 p {
+            transform: scaleX(1.5);
+        }
+        #scale .box3 p {
+            transform: scaleY(0.5);
+        }
+
+        #rotate .box1 p {
+            transform: rotate(30deg);
+        }
+        #rotate .box2 p {
+            transform: rotate(-45deg);
+        }
+        #rotate .box3 p {
+            transform: rotate(30deg);
+            transform-origin: right top;
+        }
+        
+        #skew .box1 p {
+            transform: skew(30deg,30deg);
+        }
+        #skew .box2 p {
+            transform: skewX(-30deg);
+        }
+        #skew .box3 p {
+            transform: skewY(30deg);
+        }
+
+        #translate .box1 p {
+            transform: translate(100px, 100px);
+        }
+        #translate .box2 p {
+            transform: translateX(100px);
+        }
+        #translate .box3 p {
+            transform: translateY(100px);
+        }
+
+
+        #rotate_3d .box1 {
+            perspective: 300px;
+        }
+        #rotate_3d .box1 p {
+            transform: rotateY(50deg);
+            transition: all 0.8s;
+        }
+        #rotate_3d .box1:hover p {
+            transform: rotateY(310deg);
+        }
+        #rotate_3d .box2 {
+            perspective: 300px;
+        }
+        #rotate_3d .box2 p {
+            transform: rotateX(50deg)
+        }
+        #rotate_3d .box3 {
+            perspective: 300px;
+        }
+        #rotate_3d .box3 p {
+            transform: rotateY(0deg);
+            transform-origin: left top;
+            transition: all 1.2s;
+        }
+        #rotate_3d .box3:hover p {
+            transform: rotateY(120deg);
+            opacity: 0;
+        }
+
+    </style> -->
+    
+</body>
+<!-- js 
+    <script src="js/js.js"></script>-->
+</html>

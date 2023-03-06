@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_jquery</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+    <h1>this문</h1>
+    <p>event가 일어난 주제를 바로 선택해 주는 기능</p>
+    <ul id="menu1">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+        <li>list5</li>
+    </ul>
+
+    <div class="wrapper">
+        <ul id="menu2">
+            <li>list1</li>
+            <li>list2</li>
+            <li>list3</li>
+            <li>list4</li>
+            <li>list5</li>
+        </ul>
+        <div class="box">
+            <p>The snow glows white on the mountain tonight
+                Not a footprint to be seen.
+                A kingdom of isolation
+                And it looks like I'm the queen.</p>
+    
+            <p>The wind is howling like this swirling storm inside
+                Couldn't keep it in, heaven knows I've tried
+                Don't let them in, don't let them see
+                Be the good girl you always have to be
+                Conceal, don't feel, don't let them know</p>
+                
+            <p>Can't hold it back anymore
+                Let it go, let it go
+                Turn away and slam the door
+                I don't care what they're going to say
+                Let the storm rage on</p>
+    
+            <p>My power flurries through the air into the ground
+                My soul is spiraling in frozen fractals all around
+                And one thought crystallizes like an icy blast
+                I'm never going back, the past is in the past
+                Let it go, let it go</p>
+    
+            <p>When I'll rise like the break of dawn
+                Let it go, let it go
+                That perfect girl is gone
+                Here I stand in the light of day
+                Let the storm rage on
+                The cold never bothered me anyway</p>
+        </div>
+    </div>
+
+<!-- style -->
+<style>
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    .box {
+        width: 60%;       
+        position: relative;
+    }
+    .box>p {
+        position: absolute;
+        display: none;
+    }
+    .box>p:nth-child(1) {
+        display: block;
+    }
+</style>
+
+
+
+
+<!-- jquery -->
+    <script>
+        $(document).ready(function(){
+
+            // menu1 안에 있는 list를 클릭했을 때, 내 자신의 색깔이 바뀌어라.
+            $('#menu1 li:nth-child(1)').click(function(){
+
+                $(this).css({color:'lightsteelblue'})
+            });
+            $('#menu1 li').click(function(){
+                $(this).css({color:'tomato'})
+
+                let i =$(this).index()
+                console.log(i)
+            })
+
+            // menu2 안에 있는 li 클릭해서 순번찾기
+            // box안 p의 순번을 li의 순번과 동일하게 보이기
+            // 클릭한 li자신의 스타일 바꾸기
+
+            $('#menu2 li').click(function(){
+                let ab =$(this).index();
+                console.log(ab);
+                $('.box>p').css({display:'none'})
+                $('.box>p').eq(ab).css({display :'block'})
+            })
+        
+        })
+    </script>
+</body>
+</html>

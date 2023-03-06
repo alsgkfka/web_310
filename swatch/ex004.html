@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/380f7508ab.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <p class="logo"><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></p>
+        <ul id="gnb">
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+            <li><a href="#">menu5</a></li>
+            <li><a href="#">menu6</a></li>
+            <li><a href="#">menu7</a></li>
+            <li><a href="#">menu8</a></li>
+        </ul>
+    </header>
+    <div class="num">
+        <h1>00</h1>
+    </div>
+    <div id="wrap">
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+    </div>
+
+    <!-- css -->
+    <style>
+        /* body */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #666;
+        }
+        img {
+        border: none;
+        vertical-align: bottom;
+        }
+
+        /* header set */
+        .logo {
+            position: fixed;
+            z-index: 100;
+            top: 10px;
+            left: 100px;
+            font-size: 30px;
+        }
+        .logo:hover a {
+            color: #eee;
+            font-size: 32px;
+        }
+
+        #gnb {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            position: fixed;
+            background-color: lightsteelblue;
+            align-items: center;
+            justify-content: center;
+        }
+        #gnb li {}
+
+        #gnb li a {
+            display: block;
+            padding: 20px;
+            margin: 0 40px;
+            font-weight: bold;
+            opacity: 0.5;
+            
+        }
+        #gnb li:nth-child(1):hover a {
+            color: darkblue;
+            background-color: hotpink;
+            opacity: 1;
+        }
+        #gnb li:nth-child(2):hover a {
+            color: lavenderblush;
+            background-color: deeppink;
+            opacity: 1;
+        }
+        #gnb li:nth-child(3):hover a {
+            color: darkblue;
+            background-color: hotpink;
+            opacity: 1;
+        }
+        #gnb li:nth-child(4):hover a {
+            color: lavenderblush;
+            background-color: deeppink;
+            opacity: 1;
+        }
+        #gnb li:nth-child(5):hover a {
+            color: darkblue;
+            background-color: hotpink;
+            opacity: 1;
+        }
+        #gnb li:nth-child(6):hover a {
+            color: lavenderblush;
+            background-color: deeppink;
+            opacity: 1;
+        }
+        #gnb li:nth-child(7):hover a {
+            color: darkblue;
+            background-color: hotpink;
+            opacity: 1;
+        }
+        #gnb li:nth-child(8):hover a {
+            color: lavenderblush;
+            background-color: deeppink;
+            opacity: 1;
+        }
+
+
+        /* class on */
+        #gnb li.on a {
+            display: block;
+            padding: 20px;
+            margin: 0 40px;
+            font-weight: bold;
+            opacity: 0.5;
+            
+        }
+        #gnb li:nth-child(1).on a {
+            color: darkblue;
+            background-color: hotpink;
+            opacity: 1;
+        }
+        #gnb li:nth-child(2).on a {
+            color: lavenderblush;
+            background-color: deeppink;
+            opacity: 1;
+        }
+        #gnb li:nth-child(3).on a {
+            color: darkblue;
+            background-color: hotpink;
+            opacity: 1;
+        }
+        #gnb li:nth-child(4).on a {
+            color: lavenderblush;
+            background-color: deeppink;
+            opacity: 1;
+        }
+        #gnb li:nth-child(5).on a {
+            color: darkblue;
+            background-color: hotpink;
+            opacity: 1;
+        }
+        #gnb li:nth-child(6).on a {
+            color: lavenderblush;
+            background-color: deeppink;
+            opacity: 1;
+        }
+        #gnb li:nth-child(7).on a {
+            color: darkblue;
+            background-color: hotpink;
+            opacity: 1;
+        }
+        #gnb li:nth-child(8).on a {
+            color: lavenderblush;
+            background-color: deeppink;
+            opacity: 1;
+        }
+
+        /* section set */
+        .num {
+            position: fixed;
+            left: 100px;
+            top: 100px;
+        }
+        section {
+            width: 100%;
+            height: 800px;
+        }
+        section:nth-child(1) {
+            background-color: #aaa;
+        }
+        section:nth-child(2) {
+            background-color: #888;
+        }
+        section:nth-child(3) {
+            background-color: lightgoldenrodyellow;
+        }
+        section:nth-child(4) {
+            background-color: #555;
+        }
+        section:nth-child(5) {
+            background-color: #eee;
+        }
+        section:nth-child(6) {
+            background-color: mintcream;
+        }
+        section:nth-child(7) {
+            background-color: #ccc;
+        }
+        section:nth-child(8) {
+            background-color: #222;
+        }
+    </style>
+
+
+
+    <!-- jquery -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script>
+        $(document).ready(function(){
+            let ht = $(window).height();
+            console.log(ht);
+
+            $('section').height(ht);
+
+            $(window).resize(function(){
+                let ht =$(window).height();
+                $('section').height(ht);
+            })
+
+
+
+            $(window).scroll(function(){
+                let sc = $(this).scrollTop();
+                $('h1').text(sc)
+
+                let ht = $(window).height();
+
+                for(var ab=0; ab<9; ab++){
+                    if(sc>=ab*ht && sc<ht*(ab+1)){
+                        $('#gnb li').removeClass('on')
+                        $('#gnb li').eq(ab).addClass('on')
+                    }
+                }
+            })
+
+
+
+            $('#gnb li').click(function(){
+                let i = $(this).index();
+                let ht = $(window).height();
+
+                $('html,body').stop().animate({scrollTop : ht*i}, 1400, 'easeInOutBack')
+
+                $('#gnb li').removeClass('on')
+                $(this).addClass('on')
+            })
+
+
+            // mousewheel function
+            $('section').mousewheel(function(event,delta){
+                if(delta>0){
+                    // prev.page
+                    let prev = $(this).prev().offset().top;
+                    $('html,body').stop().animate({scrollTop : prev}, 1400, 'easeInOutBack')
+                }
+                else if(delta<0){
+                    // next.page
+                    let next = $(this).next().offset().top;
+                    $('html,body').stop().animate({scrollTop : next}, 1400, 'easeInOutBack')
+                }
+            })
+        })
+
+    </script>
+</body>
+</html>
